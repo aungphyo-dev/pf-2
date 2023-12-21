@@ -9,7 +9,7 @@ const inter = Inter({subsets: ['latin']})
 export const metadata : Metadata = {
     metadataBase: new URL('https://aungpyaephyoe.vercel.app'),
     title: {
-        default: 'Aung Pyae Phyo',
+        default: 'Next app',
         template: '%s | Aung Pyae Phyo',
     },
     icons: [{rel: 'icon', url: "/fav.png"}],

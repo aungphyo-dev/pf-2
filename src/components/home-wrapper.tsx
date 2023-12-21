@@ -1,8 +1,8 @@
-import {About, Hero} from "@/components";
+import {About, AnimationScreen, Contact, Experience, Footer, Hero, Project} from "@/components";
 const HomeWrapper = () => {
     return (
         <main className='relative w-full'>
-            {/*<AnimeC/>*/}
+            <AnimationScreen/>
             <div className='w-full min-h-screen'>
                 <div className="max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-2 px-0 lg:px-6">
                     <div
@@ -11,10 +11,10 @@ const HomeWrapper = () => {
                     </div>
                     <div className='min-h-screen flex flex-col justify-start items-center px-3 lg:px-16'>
                         <About/>
-                        {/*<Experience/>*/}
-                        {/*<Project/>*/}
-                        {/*<Contact/>*/}
-                        {/*<Footer/>*/}
+                        <Experience/>
+                        <Project/>
+                        <Contact/>
+                        <Footer/>
                     </div>
                 </div>
             </div>

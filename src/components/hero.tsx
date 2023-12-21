@@ -1,4 +1,5 @@
 import {NavigationBar, SocialLink} from "@/components";
+import Link from "next/link";
 
 const Hero = () => {
     return (
@@ -6,10 +7,10 @@ const Hero = () => {
             <div className="w-full flex flex-col justify-start items-start">
                 <div
                     className="mb-3">
-                    <div
+                    <Link href="/"
                         className="cursor-pointer group/typle inline-flex font-semibold lg:text-slate-200 text-3xl lg:text-[48px] text-[#e2e8f0] tracking-wide">
                         Aung Pyae Phyo
-                    </div>
+                    </Link>
                 </div>
                 <div
                     className='mb-3'>
