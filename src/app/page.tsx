@@ -1,7 +1,7 @@
-import HomeWrapper from "@/components/home-wrapper";
+import HomeWrapper from '@/components/home-wrapper';
 
 const HomePage = () => {
-    return <HomeWrapper/>;
+  return <HomeWrapper />;
 };
 
 export default HomePage;

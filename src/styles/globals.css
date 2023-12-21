@@ -2,12 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-.active .nav-indicator{
+.active .nav-indicator {
   width: 4rem;
-  background: rgb(226,232,240);
+  background: rgb(226, 232, 240);
 }
-.active .nav-text{
-  color :rgb(226,232,240)
+.active .nav-text {
+  color: rgb(226, 232, 240);
 }
 
 /*::-webkit-scrollbar {*/
