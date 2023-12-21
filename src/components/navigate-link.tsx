@@ -1,6 +1,5 @@
-import React from 'react';
 import Link from 'next/link';
-import { MoveUpRight } from 'lucide-react';
+import { MoveRight } from 'lucide-react';
 const NavigateLink = ({
   link,
   download,
@@ -18,7 +17,7 @@ const NavigateLink = ({
         className='group text-slate-400 hover:underline'
       >
         {content}
-        <MoveUpRight
+        <MoveRight
           size={20}
           className='ml-1 inline-flex transition duration-500 group-hover:translate-x-1'
         />

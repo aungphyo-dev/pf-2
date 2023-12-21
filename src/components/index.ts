@@ -11,6 +11,9 @@ import Footer from '@/components/footer';
 import AnimationScreen from '@/components/animation-screen';
 import SubmitButton from '@/components/submit-button';
 import Contact from '@/components/contact';
+import ProjectsComponent from '@/components/projects-component';
+import NavigationButton from '@/components/navigation-button';
+import StickyNavigationBar from '@/components/sticky-navigation-bar';
 export {
   NavigationBar,
   About,
@@ -25,4 +28,7 @@ export {
   AnimationScreen,
   SubmitButton,
   Contact,
+  ProjectsComponent,
+  NavigationButton,
+  StickyNavigationBar,
 };

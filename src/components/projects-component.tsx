@@ -1,7 +1,9 @@
 'use client';
 import Link from 'next/link';
+import { ProjectsType } from '@/types';
+import { ArrowLeft, ExternalLink } from 'lucide-react';
 
-const ProjectsComponent = ({ projects }) => {
+const ProjectsComponent = ({ projects }: { projects: ProjectsType }) => {
   return (
     <div className='relative mx-auto min-h-screen w-full max-w-screen-xl pt-[20px]'>
       <div className='px-3 py-9 md:px-5'>
@@ -9,19 +11,7 @@ const ProjectsComponent = ({ projects }) => {
           href={'/'}
           className='group mb-2 inline-flex items-center font-semibold leading-tight text-teal-300'
         >
-          <svg
-            xmlns='http://www.w3.org/2000/svg'
-            viewBox='0 0 20 20'
-            fill='currentColor'
-            className='mr-1 h-4 w-4 rotate-180 transition-transform group-hover:-translate-x-2'
-            aria-hidden='true'
-          >
-            <path
-              fillRule='evenodd'
-              d='M3 10a.75.75 0 01.75-.75h10.638L10.23 5.29a.75.75 0 111.04-1.08l5.5 5.25a.75.75 0 010 1.08l-5.5 5.25a.75.75 0 11-1.04-1.08l4.158-3.96H3.75A.75.75 0 013 10z'
-              clipRule='evenodd'
-            ></path>
-          </svg>
+          <ArrowLeft className='mr-1 h-4 w-4 transition-transform group-hover:-translate-x-2' />
           Typle
         </Link>
         <h1 className='text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl'>
@@ -75,7 +65,7 @@ const ProjectsComponent = ({ projects }) => {
                     rel='noreferrer'
                     className='group text-white'
                   >
-                    <FiExternalLink className='mx-auto  transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-2 md:mx-0' />
+                    <ExternalLink className='mx-auto  transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-2 md:mx-0' />
                   </a>
                 </td>
               </tr>

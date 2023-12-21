@@ -1,17 +1,13 @@
 import { NavigationBar, SocialLink } from '@/components';
 import Link from 'next/link';
-
 const Hero = () => {
   return (
-    <section
-      className='relative w-full bg-transparent pt-[15px] lg:pt-[5rem]'
-      id='home'
-    >
+    <section className='relative w-full' id='home'>
       <div className='flex w-full flex-col items-start justify-start'>
         <div className='mb-3'>
           <Link
             href='/'
-            className='group/typle inline-flex cursor-pointer text-3xl font-semibold tracking-wide text-[#e2e8f0] lg:text-[48px] lg:text-slate-200'
+            className='group/typle inline-flex cursor-pointer text-3xl font-bold tracking-wide text-[#e2e8f0] lg:text-[48px] lg:text-slate-200'
           >
             Aung Pyae Phyo
           </Link>

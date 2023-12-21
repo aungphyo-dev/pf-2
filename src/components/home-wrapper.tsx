@@ -11,12 +11,12 @@ const HomeWrapper = () => {
   return (
     <main className='relative w-full'>
       <AnimationScreen />
-      <div className='min-h-screen w-full'>
-        <div className='mx-auto grid max-w-screen-xl grid-cols-1 px-0 lg:grid-cols-2 lg:px-6'>
-          <div className='top-0 flex h-auto flex-col items-center justify-start px-3 lg:sticky lg:h-screen lg:px-14'>
+      <div className='mx-auto min-h-screen max-w-screen-xl px-4 py-12 font-sans md:px-8 md:py-20 lg:py-0'>
+        <div className='grid-cols-2 lg:grid'>
+          <div className='lg:sticky lg:top-0  lg:max-h-screen  lg:flex-col lg:justify-between lg:py-24'>
             <Hero />
           </div>
-          <div className='flex min-h-screen flex-col items-center justify-start px-3 lg:px-16'>
+          <div className='pt-12 lg:px-8 lg:pt-24'>
             <About />
             <Experience />
             <Project />

@@ -1,8 +1,17 @@
 'use server';
-
 import supabase from '@/services/supabase';
-import { MailSchema, MailType, ProjectsSchema } from '@/types';
-
+import { MailSchema, ProjectsSchema } from '@/types';
+export const getAllProjects = async () => {
+  const { data } = await supabase
+    .from('projects')
+    .select('*')
+    .order('id', { ascending: false });
+  const validateFields = ProjectsSchema.safeParse(data);
+  if (!validateFields.success) {
+    throw new Error('Something went wrong!');
+  }
+  return validateFields.data;
+};
 export const getProjectByLimit = async (limit: number = 4) => {
   const { data } = await supabase
     .from('projects')
@@ -41,5 +50,5 @@ export const sendMail = async (
   if (!res.ok) {
     throw new Error('Something went wrong');
   }
-  return 'Successfully sent your';
+  return 'Successfully';
 };

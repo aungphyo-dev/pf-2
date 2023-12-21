@@ -1,6 +1,6 @@
 'use client';
 import { ChangeEvent, useEffect, useState } from 'react';
-import { SubmitButton } from '@/components/index';
+import { StickyNavigationBar, SubmitButton } from '@/components';
 import { useFormState } from 'react-dom';
 import { sendMail } from '@/actions';
 const Contact = () => {
@@ -11,7 +11,6 @@ const Contact = () => {
     question: '',
     message: '',
   });
-  console.log(state);
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -21,17 +20,13 @@ const Contact = () => {
     }));
   };
   useEffect(() => {
-    if (state === 'Successfully send your') {
+    if (state === 'Successfully') {
       setContactForm({ name: '', email: '', question: '', message: '' });
     }
   }, [state]);
   return (
-    <div className='w-full pt-[5rem]'>
-      <div className='sticky top-0 z-20 mb-4 w-full bg-slate-950/75 py-5 backdrop-blur lg:sr-only lg:relative lg:top-auto lg:mx-auto lg:w-full lg:px-0 lg:py-0 lg:opacity-0'>
-        <h2 className='text-sm font-bold uppercase tracking-widest text-slate-200 lg:sr-only'>
-          Contact Me
-        </h2>
-      </div>
+    <div className='pt-12 lg:pt-24'>
+      <StickyNavigationBar name={'contact'} />
       <form action={action} className='p-lg:p-5 w-full'>
         <div className='group relative z-0 mb-6 w-full'>
           <input
