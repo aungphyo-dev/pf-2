@@ -1,9 +1,9 @@
 import { MdxViewer } from '@/components/mdx-viewer';
 import { getBlogPosts } from '@/db/blog';
 import { notFound } from 'next/navigation';
-
-const BlogById = () => {
-    let post = getBlogPosts().find((post) => post.slug === 'test');
+const BlogById = ({ params }: { params: { slug: string } }) => {
+    const { slug } = params;
+    let post = getBlogPosts().find((post) => post.slug === slug);
     if (!post) {
         notFound();
     }

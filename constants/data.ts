@@ -10,6 +10,9 @@ export const navigation_items = [
     {
         name: 'Projects',
     },
+    {
+        name: 'Blogs',
+    },
 ];
 export const dashboard_navigation_items = [
     {

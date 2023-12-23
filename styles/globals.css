@@ -52,7 +52,7 @@
     @apply rounded-lg px-1 py-0.5;
 }
 .prose pre {
-    @apply bg-gray-400 text-black dark:bg-black dark:text-white;
+    @apply bg-gray-200 text-black dark:bg-black dark:text-white;
 }
 .prose pre code {
     @apply p-0;

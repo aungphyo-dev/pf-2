@@ -5,6 +5,7 @@ import {
     Experience,
     Footer,
     Hero,
+    NavigateLink,
     Project,
 } from '@/components';
 import { Suspense } from 'react';
@@ -27,6 +28,10 @@ const HomeWrapper = () => {
                         >
                             <Project />
                         </Suspense>
+                        <NavigateLink
+                            link={'/blogs'}
+                            content={'view my testing blogs'}
+                        />
                         <Contact />
                         <Footer />
                     </div>
