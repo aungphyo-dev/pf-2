@@ -1,3 +1,4 @@
+export const revalidate = 0;
 import HomeWrapper from '@/components/home-wrapper';
 
 const HomePage = () => {

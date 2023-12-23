@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { ProjectsType } from '@/types';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
 
-const ProjectsComponent = ({ projects }: { projects: ProjectsType }) => {
+const ProjectsTable = ({ projects }: { projects: ProjectsType }) => {
     return (
         <div className='relative mx-auto min-h-screen w-full max-w-screen-xl pt-[20px]'>
             <div className='px-3 py-9 md:px-5'>
@@ -85,4 +85,4 @@ const ProjectsComponent = ({ projects }: { projects: ProjectsType }) => {
     );
 };
 
-export default ProjectsComponent;
+export default ProjectsTable;

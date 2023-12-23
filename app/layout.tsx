@@ -8,7 +8,7 @@ import { GeistMono } from 'geist/font/mono';
 export const metadata: Metadata = {
     metadataBase: new URL('https://aungpyaephyoe.vercel.app'),
     title: {
-        default: 'Aung Pyae Phyo',
+        default: 'Next APp',
         template: '%s | Aung Pyae Phyo',
     },
     icons: [{ rel: 'icon', url: '/fav.png' }],

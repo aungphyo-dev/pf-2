@@ -1,0 +1,58 @@
+# Welcome
+
+###### **This page is under maintenance.**
+
+```js
+// input
+const xs: Array<number> = [1, 2, 3]
+
+// transformation
+const double = (n: number): number => n * 2
+
+// result: I want an array where each `xs`' element is doubled
+const ys: Array<number> = []
+for (let i = 0; i <= xs.length; i++) {
+  ys.push(double(xs[i]))
+}
+```
+
+I've moved my content from HTML to vanilla Markdown, to MDX, to a CMS, and back to MDX over the years. My content requirements as of now are:
+
+```js
+export type Action =
+  | {
+      readonly type: 'ADD_TODO'
+      readonly text: string
+    }
+  | {
+      readonly type: 'UPDATE_TODO'
+      readonly id: number
+      readonly text: string
+      readonly completed: boolean
+    }
+  | {
+      readonly type: 'DELETE_TODO'
+      readonly id: number
+    }
+
+export const add = (text: string): Action => ({
+  type: 'ADD_TODO',
+  text
+})
+
+export const update = (
+  id: number,
+  text: string,
+  completed: boolean
+): Action => ({
+  type: 'UPDATE_TODO',
+  id,
+  text,
+  completed
+})
+
+export const del = (id: number): Action => ({
+  type: 'DELETE_TODO',
+  id
+})
+```

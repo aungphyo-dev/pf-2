@@ -1,8 +1,9 @@
 'use server';
 import supabase from '@/services/supabase';
 import { MailSchema, ProjectsSchema, UserSchema } from '@/types';
-import { signIn } from '@/auth';
+import { signIn, signOut } from '@/auth';
 import { AuthError } from 'next-auth';
+import { revalidatePath } from 'next/cache';
 export const getAllProjects = async () => {
     const { data } = await supabase
         .from('projects')
@@ -81,12 +82,12 @@ export const authenticate = async (
                 case 'CredentialsSignin':
                     return {
                         errors: {},
-                        message: 'Error 1',
+                        message: 'Something went wrong!',
                     };
                 default:
                     return {
                         errors: {},
-                        message: 'Error 2',
+                        message: 'Something went wrong!',
                     };
             }
         }
@@ -96,4 +97,14 @@ export const authenticate = async (
         errors: {},
         message: 'Successfully  signed in',
     };
+};
+export const authSignOut = async () => {
+    await supabase.auth.signOut();
+    await signOut();
+};
+export const deleteProject = async (id: number, image: string) => {
+    console.log(id, image);
+    await supabase.storage.from('projects').remove([`images/${image}`]);
+    await supabase.from('projects').delete().eq('id', id);
+    revalidatePath('/dashboard/projects');
 };

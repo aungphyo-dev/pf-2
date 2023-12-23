@@ -1,12 +1,14 @@
 import NextAuth, { User } from 'next-auth';
 import { authConfig } from './auth.config';
 import Credentials from 'next-auth/providers/credentials';
-import { AuthUserSchema, AuthUserType } from '@/types';
+import { AuthUserType } from '@/types';
 import supabase from '@/services/supabase';
+
 declare module '@auth/core/types' {
     interface Session {
         user: AuthUserType & DefaultSession['user'];
     }
+
     interface User {
         id: string;
         role: string;
@@ -36,14 +38,12 @@ export const { auth, signIn, signOut } = NextAuth({
                         user: { id, email, role },
                         session: { access_token },
                     } = data;
-                    const validateFields = AuthUserSchema.safeParse({
+                    return {
                         id,
                         email,
                         role,
                         jwt: access_token,
-                    });
-                    if (!validateFields.success) return null;
-                    return validateFields.data as User;
+                    } as User;
                 }
                 return null;
             },
@@ -76,5 +76,8 @@ export const { auth, signIn, signOut } = NextAuth({
             return session;
         },
     },
-    session: { strategy: 'jwt' },
+    session: {
+        strategy: 'jwt',
+        maxAge: 60 * 60 * 24 * 30,
+    },
 });

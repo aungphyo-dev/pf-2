@@ -2,7 +2,7 @@ import { StickyNavigationBar } from '@/components';
 
 const About = () => {
     return (
-        <section aria-label='about' id='about'>
+        <section aria-label='about' id='about' className='pt-12 lg:pt-24 '>
             <StickyNavigationBar name={'about'} />
             <p className='mb-5 text-[17px] leading-[30px] tracking-wide text-[#94a3b8]'>
                 Hello, I am{' '}

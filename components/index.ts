@@ -11,10 +11,12 @@ import Footer from '@/components/footer';
 import AnimationScreen from '@/components/animation-screen';
 import SubmitButton from '@/components/submit-button';
 import Contact from '@/components/contact';
-import ProjectsComponent from '@/components/projects-component';
+import ProjectsTable from '@/components/projects-table';
 import NavigationButton from '@/components/navigation-button';
 import StickyNavigationBar from '@/components/sticky-navigation-bar';
 import AdminLoginForm from '@/components/admin-login-form';
+import AdminDashboardSideBar from '@/components/admin-dashboard-side-bar';
+import SignOutButton from '@/components/sign-out-button';
 export {
     NavigationBar,
     About,
@@ -29,8 +31,10 @@ export {
     AnimationScreen,
     SubmitButton,
     Contact,
-    ProjectsComponent,
+    ProjectsTable,
     NavigationButton,
     StickyNavigationBar,
     AdminLoginForm,
+    AdminDashboardSideBar,
+    SignOutButton,
 };

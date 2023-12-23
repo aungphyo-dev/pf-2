@@ -7,6 +7,7 @@ import {
     Hero,
     Project,
 } from '@/components';
+import { Suspense } from 'react';
 const HomeWrapper = () => {
     return (
         <main className='relative w-full'>
@@ -16,10 +17,16 @@ const HomeWrapper = () => {
                     <div className='lg:sticky lg:top-0  lg:max-h-screen  lg:flex-col lg:justify-between lg:py-24'>
                         <Hero />
                     </div>
-                    <div className='pt-12 lg:px-8 lg:pt-24'>
+                    <div className='lg:px-8 '>
                         <About />
                         <Experience />
-                        <Project />
+                        <Suspense
+                            fallback={
+                                <div className='text-slate-200'>Loading...</div>
+                            }
+                        >
+                            <Project />
+                        </Suspense>
                         <Contact />
                         <Footer />
                     </div>

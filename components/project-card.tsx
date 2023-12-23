@@ -50,7 +50,7 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
                         priority
                         sizes={'500'}
                         style={{ objectFit: 'cover' }}
-                        src={`https://otgegesmjkdjmcppbsbl.supabase.co/storage/v1/object/public/projects/images/${project.image}`}
+                        src={`${process.env.NEXT_PUBLIC_SUPABASE_IMAGE_URL}${project.image}`}
                         alt={'IMAGE'}
                     />
                 </div>
