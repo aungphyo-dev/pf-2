@@ -51,7 +51,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "development",
     "ignore.virus.scanning.warn.message": "true",
     "js.last.introduce.type": "LET",
     "last_opened_file_path": "C:/Users/Typle/Desktop/v5",
@@ -66,6 +66,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Typle\Desktop\v5\public" />
       <recent name="C:\Users\Typle\Desktop\v5\components" />
       <recent name="C:\Users\Typle\Desktop\v5\components\auth" />
     </key>
