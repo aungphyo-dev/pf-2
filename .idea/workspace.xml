@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0b6f181e-c528-46a9-8279-1f541ee0f0a8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/blog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/blog.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,7 +53,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "development",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "js.last.introduce.type": "LET",
     "last_opened_file_path": "C:/Users/Typle/Desktop/v5",

@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { MdxViewer } from '@/components/mdx-viewer';
 import { getBlogPosts } from '@/db/blog';
 import { notFound } from 'next/navigation';
