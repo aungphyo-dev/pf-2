@@ -6,16 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0b6f181e-c528-46a9-8279-1f541ee0f0a8" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogs/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogs/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogs/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogs/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/about.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/about.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/home-wrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home-wrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/2024.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/2024.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/asynchronous-programming-in-JavaScript-Why-callback.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/asynchronous-programming-in-JavaScript-Why-callback.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/san-kyi-nay-tar-blog-ko-hel-hel.mdx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db/blog.ts" beforeDir="false" afterPath="$PROJECT_DIR$/db/blog.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +53,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "development",
     "ignore.virus.scanning.warn.message": "true",
     "js.last.introduce.type": "LET",
     "last_opened_file_path": "C:/Users/Typle/Desktop/v5",
