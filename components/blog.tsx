@@ -5,7 +5,7 @@ import { NavigateLink, StickyNavigationBar } from '@/components/index';
 import Link from 'next/link';
 
 const Blog = () => {
-    let blog = getBlogPosts().filter((post, index) => index < 4).sort((a, b) => {
+    let blog = getBlogPosts().sort((a, b) => {
         if (
             new Date(a.metadata.publishedAt) >
             new Date(b.metadata.publishedAt)
@@ -13,7 +13,7 @@ const Blog = () => {
             return -1;
         }
         return 1;
-    });
+    }).filter((post, index) => index < 4)
     return (
         <div aria-label='blogs' className='pt-12 lg:pt-24' id='blogs'>
             <StickyNavigationBar name={'blogs'} />
