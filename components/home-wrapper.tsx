@@ -5,10 +5,10 @@ import {
     Experience,
     Footer,
     Hero,
-    NavigateLink,
     Project,
 } from '@/components';
 import { Suspense } from 'react';
+import Blog from '@/components/blog';
 const HomeWrapper = () => {
     return (
         <main className='relative w-full'>
@@ -28,10 +28,13 @@ const HomeWrapper = () => {
                         >
                             <Project />
                         </Suspense>
-                        <NavigateLink
-                            link={'/blogs'}
-                            content={'view my testing blogs'}
-                        />
+                        <Suspense
+                            fallback={
+                                <div className='text-slate-200'>Loading...</div>
+                            }
+                        >
+                            <Blog />
+                        </Suspense>
                         <Contact />
                         <Footer />
                     </div>

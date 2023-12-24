@@ -3,12 +3,12 @@ import type { Metadata } from 'next';
 import { ReactNode } from 'react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
-import { GeistMono } from 'geist/font/mono';
+import { GeistSans } from 'geist/font/sans';
 
 export const metadata: Metadata = {
-    metadataBase: new URL('https://aungpyaephyoe.vercel.app'),
+    metadataBase: new URL('https://aungpyaephyo.vercel.app'),
     title: {
-        default: 'Next APp',
+        default: 'Aung Pyae Phyo',
         template: '%s | Aung Pyae Phyo',
     },
     icons: [{ rel: 'icon', url: '/fav.png' }],
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     openGraph: {
         title: 'Aung Pyae Phyo',
         description: 'Experienced Frontend developer',
-        url: 'https://aungpyaephyoe.vercel.app',
+        url: 'https://aungpyaephyo.vercel.app',
         siteName: 'Aung Pyae Phyo',
         locale: 'en_US',
         type: 'website',
@@ -42,7 +42,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     return (
         <html lang='en'>
             <body
-                className={`${GeistMono.className} w-full bg-slate-950 leading-relaxed selection:bg-teal-300 selection:text-teal-900`}
+                className={`${GeistSans.className} w-full bg-slate-950 leading-relaxed selection:bg-teal-300 selection:text-teal-900`}
                 suppressHydrationWarning
             >
                 {children}
