@@ -27,7 +27,7 @@ const Blog = () => {
                             <div className='z-10 col-span-8'>
                                 <Link
                                     href={`/blogs/${blog.slug}`}
-                                    className='group/link inline-flex items-baseline text-base font-medium leading-tight text-slate-200  hover:text-teal-300 focus-visible:text-teal-300'
+                                    className='group/link inline-flex items-baseline text-base font-medium leading-tight text-slate-400  hover:text-teal-300 focus-visible:text-teal-300'
                                 >
                                     <span className='absolute -inset-x-4 -inset-y-2.5 hidden rounded uppercase md:-inset-x-6 md:-inset-y-4 lg:block'></span>
                                     {blog.metadata.title}

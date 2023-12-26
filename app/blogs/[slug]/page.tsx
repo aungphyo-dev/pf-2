@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import { increaseViewsCount } from '@/actions';
 import { MdxViewer } from '@/components/mdx-viewer';
 import ViewsCounter from '@/components/views-counter';
@@ -7,7 +9,6 @@ import supabase from '@/services/supabase';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 
-export const revalidate = 0;
 const BlogById = async ({ params }: { params: { slug: string } }) => {
     const { slug } = params;
     let post = getBlogPosts().find((post) => post.slug === slug);

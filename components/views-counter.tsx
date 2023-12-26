@@ -1,15 +1,11 @@
-'use client';
-import CountUp from 'react-countup';
+const formatCompactNumber = (number: number) => {
+    const formatter = Intl.NumberFormat('en', { notation: 'compact' });
+    return formatter.format(number);
+};
 const ViewsCounter = ({ views }: { views?: number }) => {
     return (
         <span className='text-neutral-600 dark:text-neutral-400'>
-            <CountUp
-                start={0}
-                end={views ?? 0}
-                duration={2}
-                separator=' '
-                suffix=' Views'
-            />
+            {views ? formatCompactNumber(views) : 0} views
         </span>
     );
 };

@@ -15,7 +15,7 @@ const SubmitButton = ({
             disabled={pending}
             className={`flex w-full items-center justify-center rounded-lg bg-blue-700 px-5 py-2.5 text-white hover:bg-blue-800  ${className}`}
         >
-            {pending ? <Loader2 className='animate-spin' /> : name}
+            {pending ? <Loader2 className='animate-spin' size={18} /> : name}
         </button>
     );
 };
