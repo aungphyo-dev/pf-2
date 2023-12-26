@@ -1,9 +1,9 @@
-export const revalidate = 0;
+export const dynamic = 'force-dynamic';
 import ViewsCounter from '@/components/views-counter';
 import { getBlogPosts } from '@/db/blog';
+import supabase from '@/services/supabase';
 import Link from 'next/link';
 import { Suspense } from 'react';
-
 const Blogs = async () => {
     let allBlogs = getBlogPosts();
     return (
@@ -29,8 +29,14 @@ const Blogs = async () => {
                                 {post.metadata.title}
                             </p>
                             <p className='text-neutral-600 dark:text-neutral-400'>
-                                <Suspense fallback={<span>Loading....</span>}>
-                                    <ViewsCounter slug={post.slug} />
+                                <Suspense
+                                    fallback={
+                                        <span className='text-neutral-600 dark:text-neutral-400'>
+                                            0
+                                        </span>
+                                    }
+                                >
+                                    <Views slug={post.slug} />
                                 </Suspense>
                             </p>
                         </div>
@@ -41,3 +47,10 @@ const Blogs = async () => {
 };
 
 export default Blogs;
+async function Views({ slug }: { slug: string }) {
+    const { data } = await supabase
+        .from('view_blogs')
+        .select('*')
+        .eq('slug', slug);
+    return <ViewsCounter views={data?.at(0)?.views} />;
+}

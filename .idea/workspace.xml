@@ -4,7 +4,50 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b6f181e-c528-46a9-8279-1f541ee0f0a8" name="Changes" comment="" />
+    <list default="true" id="0b6f181e-c528-46a9-8279-1f541ee0f0a8" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.prettierrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/actions.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(admin)/dashboard/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(admin)/dashboard/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(admin)/dashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(admin)/dashboard/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/(admin)/dashboard/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(admin)/dashboard/projects/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogs/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogs/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogs/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogs/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogs/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogs/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/projects/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/admin-blogs-chart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/admin-blogs-chart.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/admin-dashboard-side-bar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/admin-dashboard-side-bar.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/admin-dashboard-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/admin-dashboard-table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/admin-login-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/admin-login-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/animation-screen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/animation-screen.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/blog-navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/blog-navigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/blog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/blog.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/contact.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/experience.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/experience.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/home-wrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home-wrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/mdx-viewer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/mdx-viewer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/navigate-link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigate-link.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigation.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/project-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/project-card.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/project.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/projects-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/projects-table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/sign-out-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sign-out-button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/social-link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/social-link.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/submit-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/submit-button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/theme-toggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/theme-toggle.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/views-counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/views-counter.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/how-javascript-pluse-operator-work.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/how-javascript-pluse-operator-work.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/reusable-components-with-clsx.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/reusable-components-with-clsx.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/content/zero-in-programming-languages.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/zero-in-programming-languages.mdx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/services/supabase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/supabase.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -51,7 +94,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
+    "git-widget-placeholder": "development",
     "ignore.virus.scanning.warn.message": "true",
     "js.last.introduce.type": "LET",
     "last_opened_file_path": "C:/Users/Typle/Desktop/v5",
@@ -87,6 +130,7 @@
       <workItem from="1703365163610" duration="6347000" />
       <workItem from="1703409519566" duration="10081000" />
       <workItem from="1703541175130" duration="8342000" />
+      <workItem from="1703589848576" duration="3655000" />
     </task>
     <servers />
   </component>

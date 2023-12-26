@@ -1,12 +1,15 @@
-import supabase from '@/services/supabase';
-const ViewsCounter = async ({ slug }: { slug: string }) => {
-    const { data } = await supabase
-        .from('view_blogs')
-        .select('*')
-        .eq('slug', slug);
+'use client';
+import CountUp from 'react-countup';
+const ViewsCounter = ({ views }: { views?: number }) => {
     return (
         <span className='text-neutral-600 dark:text-neutral-400'>
-            {`${data?.at(0)?.views ?? 0} views`}
+            <CountUp
+                start={0}
+                end={views ?? 0}
+                duration={2}
+                separator=' '
+                suffix=' Views'
+            />
         </span>
     );
 };

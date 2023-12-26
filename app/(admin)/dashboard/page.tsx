@@ -37,7 +37,11 @@ const Dashboard = async () => {
                     </div>
                 </div>
             </div>
-            {views?  <AdminBlogsChart data={views} /> : <div>Data not found</div>}
+            {views ? (
+                <AdminBlogsChart data={views} />
+            ) : (
+                <div>Data not found</div>
+            )}
         </div>
     );
 };

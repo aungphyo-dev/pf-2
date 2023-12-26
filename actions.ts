@@ -117,11 +117,10 @@ export const increaseViewsCount = async (slug: string) => {
     if (da) {
         await supabase
             .from('view_blogs')
-            .update({ views: da?.views + 1 })
+            .update({ views: da.views + 1 })
             .eq('slug', slug);
     } else {
-        await supabase.from('view_blogs').insert({ slug, views: 1 }).select();
-        await supabase.from('view_blogs').update({ views: 1 }).eq('slug', slug);
+        await supabase.from('view_blogs').insert({ slug, views: 1 });
     }
     revalidatePath('/blogs');
 };
