@@ -1,15 +1,21 @@
-export const dynamic = 'force-dynamic';
-
+import { increaseViewsCount } from '@/actions';
 import { MdxViewer } from '@/components/mdx-viewer';
 import { getBlogPosts } from '@/db/blog';
-import { notFound } from 'next/navigation';
 import { formatDate } from '@/lib/utils';
-const BlogById = ({ params }: { params: { slug: string } }) => {
+import { notFound } from 'next/navigation';
+export async function generateStaticParams() {
+    const posts = getBlogPosts();
+    return posts.map((post) => ({
+        slug: post.slug,
+    }));
+}
+const BlogById = async ({ params }: { params: { slug: string } }) => {
     const { slug } = params;
     let post = getBlogPosts().find((post) => post.slug === slug);
     if (!post) {
         notFound();
     }
+    await increaseViewsCount(slug);
     return (
         <div className='mx-auto max-w-screen-md'>
             <div className='mb-8 mt-2 flex max-w-[650px] items-center justify-between text-sm'>

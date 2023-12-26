@@ -1,6 +1,6 @@
-import { ReactNode } from 'react';
-import Link from 'next/link';
 import { AdminDashboardSideBar } from '@/components';
+import Link from 'next/link';
+import { ReactNode } from 'react';
 
 const DashboarLayout = ({ children }: { children: ReactNode }) => {
     return (
@@ -15,9 +15,7 @@ const DashboarLayout = ({ children }: { children: ReactNode }) => {
             </nav>
             <div className='flex w-full'>
                 <AdminDashboardSideBar />
-                <div className='flex-1 px-5 pb-[200px] pt-[60px]'>
-                    {children}
-                </div>
+                <div className='flex-1 px-5 pt-[90px]'>{children}</div>
             </div>
         </div>
     );

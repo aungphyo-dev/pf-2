@@ -1,9 +1,9 @@
-import '../styles/globals.css';
+import { Analytics } from '@vercel/analytics/react';
+import { SpeedInsights } from '@vercel/speed-insights/next';
+import { GeistSans } from 'geist/font/sans';
 import type { Metadata } from 'next';
 import { ReactNode } from 'react';
-import { SpeedInsights } from '@vercel/speed-insights/next';
-import { Analytics } from '@vercel/analytics/react';
-import { GeistSans } from 'geist/font/sans';
+import '../styles/globals.css';
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://aungpyaephyo.vercel.app'),

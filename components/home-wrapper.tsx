@@ -7,8 +7,8 @@ import {
     Hero,
     Project,
 } from '@/components';
-import { Suspense } from 'react';
 import Blog from '@/components/blog';
+import { Suspense } from 'react';
 const HomeWrapper = () => {
     return (
         <main className='relative w-full'>

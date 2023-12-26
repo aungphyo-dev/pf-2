@@ -1,8 +1,8 @@
-import NextAuth, { User } from 'next-auth';
-import { authConfig } from './auth.config';
-import Credentials from 'next-auth/providers/credentials';
-import { AuthUserType } from '@/types';
 import supabase from '@/services/supabase';
+import { AuthUserType } from '@/types';
+import NextAuth, { User } from 'next-auth';
+import Credentials from 'next-auth/providers/credentials';
+import { authConfig } from './auth.config';
 
 declare module '@auth/core/types' {
     interface Session {

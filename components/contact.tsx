@@ -1,8 +1,8 @@
 'use client';
-import { ChangeEvent, useEffect, useState } from 'react';
-import { StickyNavigationBar, SubmitButton } from '@/components';
-import { useFormState } from 'react-dom';
 import { sendMail } from '@/actions';
+import { StickyNavigationBar, SubmitButton } from '@/components';
+import { ChangeEvent, useEffect, useState } from 'react';
+import { useFormState } from 'react-dom';
 const Contact = () => {
     const [state, action] = useFormState(sendMail, '');
     const [contactForm, setContactForm] = useState({

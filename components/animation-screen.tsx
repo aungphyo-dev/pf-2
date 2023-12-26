@@ -1,6 +1,6 @@
 'use client';
-import { useEffect } from 'react';
 import anime from 'animejs';
+import { useEffect } from 'react';
 const AnimationScreen = () => {
     useEffect(() => {
         const effect = document.getElementById('bg-effect');

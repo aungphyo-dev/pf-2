@@ -1,7 +1,7 @@
 'use client';
-import { useEffect, useRef, useState } from 'react';
-import { navigation_items } from '@/constants/data';
 import { NavigationButton } from '@/components/index';
+import { navigation_items } from '@/constants/data';
+import { useEffect, useRef, useState } from 'react';
 
 const NavigationBar = () => {
     const [activeSection, setActiveSection] = useState<string>('about');

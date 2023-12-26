@@ -1,4 +1,3 @@
-import React from 'react';
 import { Facebook, Github, Instagram, Twitter } from 'lucide-react';
 const SocialLink = ({ link, icon }: { link: string; icon: string }) => {
     return (

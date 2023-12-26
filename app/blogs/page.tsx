@@ -1,9 +1,10 @@
-export const dynamic = 'force-dynamic';
-
-import Link from 'next/link';
+export const revalidate = 0;
+import ViewsCounter from '@/components/views-counter';
 import { getBlogPosts } from '@/db/blog';
+import Link from 'next/link';
+import { Suspense } from 'react';
 
-const Blogs = () => {
+const Blogs = async () => {
     let allBlogs = getBlogPosts();
     return (
         <div className='mx-auto w-full max-w-screen-md'>
@@ -24,11 +25,13 @@ const Blogs = () => {
                         href={`/blogs/${post.slug}`}
                     >
                         <div className='flex w-full flex-col lg:flex-row lg:items-center lg:justify-between'>
-                            <p className='tracking-tight text-neutral-900 group-hover:text-blue-500 dark:text-neutral-100 dark:group-hover:text-blue-500'>
-                                {post.slug.toUpperCase()}
+                            <p className='tracking-tight text-neutral-900 lg:group-hover:text-blue-500 dark:text-neutral-100 dark:group-hover:text-blue-500'>
+                                {post.metadata.title}
                             </p>
                             <p className='text-neutral-600 dark:text-neutral-400'>
-                                {`0 views`}
+                                <Suspense fallback={<span>Loading....</span>}>
+                                    <ViewsCounter slug={post.slug} />
+                                </Suspense>
                             </p>
                         </div>
                     </Link>

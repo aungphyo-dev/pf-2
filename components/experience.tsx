@@ -1,9 +1,9 @@
-import Experiences from '../constants/Experiences';
 import {
     ExperienceCard,
     NavigateLink,
     StickyNavigationBar,
 } from '@/components';
+import Experiences from '../constants/Experiences';
 
 const Experience = () => {
     return (

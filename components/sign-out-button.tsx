@@ -1,5 +1,5 @@
-import { LogOut } from 'lucide-react';
 import { authSignOut } from '@/actions';
+import { LogOut } from 'lucide-react';
 
 const SignOutButton = () => {
     return (

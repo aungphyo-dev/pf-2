@@ -1,5 +1,5 @@
-import Link from 'next/link';
 import { MoveRight } from 'lucide-react';
+import Link from 'next/link';
 const NavigateLink = ({
     link,
     download,

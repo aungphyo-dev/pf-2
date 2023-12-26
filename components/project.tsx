@@ -1,6 +1,6 @@
 export const revalidate = 0;
-import { NavigateLink, ProjectCard, StickyNavigationBar } from '@/components';
 import { getProjectByLimit } from '@/actions';
+import { NavigateLink, ProjectCard, StickyNavigationBar } from '@/components';
 const Project = async () => {
     const projects = await getProjectByLimit();
     return (

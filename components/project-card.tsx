@@ -1,6 +1,6 @@
-import Link from 'next/link';
-import Image from 'next/image';
 import { ProjectType } from '@/types';
+import Image from 'next/image';
+import Link from 'next/link';
 
 const ProjectCard = ({ project }: { project: ProjectType }) => {
     return (

@@ -1,7 +1,7 @@
 'use client';
-import Link from 'next/link';
 import { ProjectsType } from '@/types';
 import { ArrowLeft, ExternalLink } from 'lucide-react';
+import Link from 'next/link';
 
 const ProjectsTable = ({ projects }: { projects: ProjectsType }) => {
     return (

@@ -1,7 +1,7 @@
 'use server';
+import { signIn, signOut } from '@/auth';
 import supabase from '@/services/supabase';
 import { MailSchema, ProjectsSchema, UserSchema } from '@/types';
-import { signIn, signOut } from '@/auth';
 import { AuthError } from 'next-auth';
 import { revalidatePath } from 'next/cache';
 export const getAllProjects = async () => {
@@ -107,4 +107,21 @@ export const deleteProject = async (id: number, image: string) => {
     await supabase.storage.from('projects').remove([`images/${image}`]);
     await supabase.from('projects').delete().eq('id', id);
     revalidatePath('/dashboard/projects');
+};
+export const increaseViewsCount = async (slug: string) => {
+    const { data: d } = await supabase
+        .from('view_blogs')
+        .select('*')
+        .eq('slug', slug);
+    const da = d?.at(0);
+    if (da) {
+        await supabase
+            .from('view_blogs')
+            .update({ views: da?.views + 1 })
+            .eq('slug', slug);
+    } else {
+        await supabase.from('view_blogs').insert({ slug, views: 1 }).select();
+        await supabase.from('view_blogs').update({ views: 1 }).eq('slug', slug);
+    }
+    revalidatePath('/blogs');
 };

@@ -3,8 +3,8 @@
 @tailwind utilities;
 
 .active .nav-indicator {
-    width: 4rem;
     background: rgb(226, 232, 240);
+    width: 4rem;
 }
 .active .nav-text {
     color: rgb(226, 232, 240);
@@ -19,12 +19,12 @@
 /*}*/
 .prose .anchor {
     @apply invisible absolute no-underline;
+    cursor: pointer;
 
     margin-left: -1em;
     padding-right: 0.5em;
     width: 80%;
     max-width: 700px;
-    cursor: pointer;
 }
 
 .anchor:hover {
@@ -104,8 +104,8 @@ input[type='email'] {
 }
 
 .prose .tweet a {
-    text-decoration: inherit;
     font-weight: 500;
+    text-decoration: inherit;
 }
 
 .prose table {
