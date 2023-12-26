@@ -51,7 +51,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "development",
+    "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
     "js.last.introduce.type": "LET",
     "last_opened_file_path": "C:/Users/Typle/Desktop/v5",
@@ -86,6 +86,7 @@
       <workItem from="1703323753100" duration="1046000" />
       <workItem from="1703365163610" duration="6347000" />
       <workItem from="1703409519566" duration="10081000" />
+      <workItem from="1703541175130" duration="8342000" />
     </task>
     <servers />
   </component>

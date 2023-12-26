@@ -37,7 +37,7 @@ const Dashboard = async () => {
                     </div>
                 </div>
             </div>
-            <AdminBlogsChart data={views} />
+            {views?  <AdminBlogsChart data={views} /> : <div>Data not found</div>}
         </div>
     );
 };
