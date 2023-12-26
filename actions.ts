@@ -1,6 +1,6 @@
 'use server';
 import { signIn, signOut } from '@/auth';
-import supabase from '@/services/supabase';
+import supabase, { supabaseAdmin } from '@/services/supabase';
 import { MailSchema, ProjectsSchema, UserSchema } from '@/types';
 import { AuthError } from 'next-auth';
 import { revalidatePath } from 'next/cache';
@@ -27,7 +27,6 @@ export const getProjectByLimit = async (limit: number = 4) => {
     }
     return validateFields.data;
 };
-
 export const sendMail = async (
     prevstate: null | string,
     formData: FormData
@@ -55,7 +54,6 @@ export const sendMail = async (
     }
     return 'Successfully';
 };
-
 interface loginPrevState {
     errors: {};
     message: null | string;
@@ -103,11 +101,19 @@ export const authSignOut = async () => {
     await signOut();
 };
 export const deleteProject = async (id: number, image: string) => {
-    console.log(id, image);
-    await supabase.storage.from('projects').remove([`images/${image}`]);
-    await supabase.from('projects').delete().eq('id', id);
+    await supabaseAdmin.storage.from('projects').remove([`images/${image}`]);
+    await supabaseAdmin.from('projects').delete().eq('id', id);
     revalidatePath('/dashboard/projects');
 };
+export const getProjectById = async (id: number) => {
+    const { data } = await supabase.from('projects').select('*').eq('id', id);
+    const validateFields = ProjectsSchema.safeParse(data);
+    if (!validateFields.success) {
+        throw new Error('Something went wrong!');
+    }
+    return validateFields.data[0];
+};
+
 export const increaseViewsCount = async (slug: string) => {
     const { data: d } = await supabase
         .from('view_blogs')

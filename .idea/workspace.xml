@@ -4,49 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="0b6f181e-c528-46a9-8279-1f541ee0f0a8" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.eslintrc.json" afterDir="false" />
+    <list default="true" id="0b6f181e-c528-46a9-8279-1f541ee0f0a8" name="Changes" comment="fix: blog fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.prettierrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/.prettierrc.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/actions.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/(admin)/dashboard/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(admin)/dashboard/layout.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(admin)/dashboard/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(admin)/dashboard/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(admin)/dashboard/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(admin)/dashboard/projects/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogs/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogs/[slug]/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogs/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogs/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/blogs/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogs/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/projects/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/auth.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/admin-blogs-chart.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/admin-blogs-chart.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/admin-dashboard-side-bar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/admin-dashboard-side-bar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/admin-dashboard-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/admin-dashboard-table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/admin-login-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/admin-login-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/animation-screen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/animation-screen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/blog-navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/blog-navigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/blog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/blog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/contact.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/contact.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/experience.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/experience.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/home-wrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home-wrapper.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/mdx-viewer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/mdx-viewer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/navigate-link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigate-link.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/navigation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/navigation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/project-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/project-card.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/project.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/projects-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/projects-table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/sign-out-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/sign-out-button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/social-link.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/social-link.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/submit-button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/submit-button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/theme-toggle.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/theme-toggle.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/views-counter.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/views-counter.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/how-javascript-pluse-operator-work.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/how-javascript-pluse-operator-work.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/reusable-components-with-clsx.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/reusable-components-with-clsx.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/content/zero-in-programming-languages.mdx" beforeDir="false" afterPath="$PROJECT_DIR$/content/zero-in-programming-languages.mdx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/services/supabase.ts" beforeDir="false" afterPath="$PROJECT_DIR$/services/supabase.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -90,23 +53,23 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "development",
-    "ignore.virus.scanning.warn.message": "true",
-    "js.last.introduce.type": "LET",
-    "last_opened_file_path": "C:/Users/Typle/Desktop/v5",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "ts.external.directory.path": "C:\\Users\\Typle\\Desktop\\v5\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;js.last.introduce.type&quot;: &quot;LET&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Typle/Desktop/v5&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Typle\\Desktop\\v5\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Typle\Desktop\v5\public" />
@@ -131,13 +94,25 @@
       <workItem from="1703409519566" duration="10081000" />
       <workItem from="1703541175130" duration="8342000" />
       <workItem from="1703589848576" duration="3655000" />
+      <workItem from="1703602269253" duration="5079000" />
+      <workItem from="1703610418004" duration="703000" />
     </task>
+    <task id="LOCAL-00001" summary="fix: blog fix">
+      <option name="closed" value="true" />
+      <created>1703611121821</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1703611121822</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
   <component name="VcsManagerConfiguration">
-    <option name="LAST_COMMIT_MESSAGE" value="" />
+    <MESSAGE value="fix: blog fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: blog fix" />
   </component>
 </project>
