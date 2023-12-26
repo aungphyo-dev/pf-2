@@ -1,6 +1,5 @@
 'use client';
-export const revalidate = 0
-import { useRouter } from 'next/navigation';
+export const revalidate = 0;
 import { supabaseAdmin } from '@/services/supabase';
 import {
     projectCreateFormSchema,
@@ -10,13 +9,14 @@ import {
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2, Plus, X } from 'lucide-react';
 import Image from 'next/image';
+import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 const ProjectEditForm = ({ project }: { project: ProjectType }) => {
     const [imageUrl, setImageUrl] = useState('');
     const [skill, setSkill] = useState('');
     const [skills, setSkills] = useState<string[]>([...project.skills]);
-    const router = useRouter()
+    const router = useRouter();
     const addSkills = () => {
         setSkills((prevState) => [...prevState, skill]);
         setSkill('');
@@ -48,15 +48,21 @@ const ProjectEditForm = ({ project }: { project: ProjectType }) => {
             title: data.title,
             description: data.description,
             demo: data.demo,
+            skills,
         };
         if (data.image?.['0']) {
-            await supabaseAdmin.storage.from('projects').upload(`images/${project.image}`, data.image?.['0'], {
+            await supabaseAdmin.storage
+                .from('projects')
+                .upload(`images/${project.image}`, data.image?.['0'], {
                     cacheControl: '3600',
                     upsert: true,
                 });
         }
-        await supabaseAdmin.from('projects').update([newData]).eq('id', project.id);
-        router.push('/dashboard/projects')
+        await supabaseAdmin
+            .from('projects')
+            .update([newData])
+            .eq('id', project.id);
+        router.push('/dashboard/projects');
     };
     return (
         <form onSubmit={handleSubmit(onSubmit)} className='pb-20 space-y-5'>
