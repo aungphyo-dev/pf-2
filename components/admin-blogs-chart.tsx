@@ -19,7 +19,6 @@ const AdminBlogsChart = ({
                 fontSize={12}
                 tickLine={false}
                 axisLine={false}
-                labels={'Blog ID'}
             />
             <YAxis
                 stroke='#888888'
@@ -27,7 +26,6 @@ const AdminBlogsChart = ({
                 tickLine={false}
                 axisLine={false}
                 tickFormatter={(value) => value}
-                labels={'Views'}
             />
             <Bar
                 dataKey='views'
