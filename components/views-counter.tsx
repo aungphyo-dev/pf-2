@@ -4,7 +4,7 @@ const formatCompactNumber = (number: number) => {
 };
 const ViewsCounter = ({ views }: { views?: number }) => {
     return (
-        <span className='text-neutral-600 dark:text-neutral-400'>
+        <span className='text-neutral-400'>
             {views ? formatCompactNumber(views) : 0} views
         </span>
     );

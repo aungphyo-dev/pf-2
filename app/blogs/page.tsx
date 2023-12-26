@@ -25,14 +25,14 @@ const Blogs = async () => {
                         href={`/blogs/${post.slug}`}
                     >
                         <div className='flex w-full flex-col lg:flex-row lg:items-center lg:justify-between'>
-                            <p className='tracking-tight text-neutral-900 lg:group-hover:text-blue-500 dark:text-neutral-100 dark:group-hover:text-blue-500'>
+                            <p className='tracking-tight lg:group-hover:text-blue-500 text-neutral-100 group-hover:text-blue-500'>
                                 {post.metadata.title}
                             </p>
                             <p className='text-neutral-600 dark:text-neutral-400'>
                                 <Suspense
                                     fallback={
                                         <span className='text-neutral-600 dark:text-neutral-400'>
-                                            0
+                                            0 view
                                         </span>
                                     }
                                 >

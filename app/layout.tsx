@@ -42,7 +42,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
     return (
         <html lang='en'>
             <body
-                className={`${GeistSans.className} w-full bg-slate-950 leading-relaxed selection:bg-teal-300 selection:text-teal-900`}
+                className={`${GeistSans.className} w-full bg-slate-900 leading-relaxed selection:bg-teal-300 selection:text-teal-900`}
                 suppressHydrationWarning
             >
                 {children}

@@ -18,14 +18,14 @@ const BlogById = async ({ params }: { params: { slug: string } }) => {
     return (
         <div className='mx-auto max-w-screen-md'>
             <div className='mb-8 mt-2 flex max-w-[650px] items-center justify-between text-sm'>
-                <p className='text-sm text-neutral-600 dark:text-neutral-400'>
+                <p className='text-sm text-neutral-400'>
                     {formatDate(post.metadata.publishedAt as string)}
                 </p>
                 <Suspense fallback={<p className='h-5' />}>
                     <Views slug={post.slug} />
                 </Suspense>
             </div>
-            <article className='prose-quoteless prose prose-neutral dark:prose-invert '>
+            <article className='prose-quoteless prose prose-invert'>
                 <MdxViewer source={post.content} />
             </article>
         </div>
