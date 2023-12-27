@@ -3,8 +3,9 @@ import { signIn, signOut } from '@/auth';
 import supabase, { supabaseAdmin } from '@/services/supabase';
 import { MailSchema, ProjectsSchema, UserSchema } from '@/types';
 import { AuthError } from 'next-auth';
-import { revalidatePath } from 'next/cache';
+import { unstable_noStore as noStore, revalidatePath } from 'next/cache';
 export const getAllProjects = async () => {
+    noStore();
     const { data } = await supabase
         .from('projects')
         .select('*')
@@ -16,6 +17,7 @@ export const getAllProjects = async () => {
     return validateFields.data;
 };
 export const getProjectByLimit = async (limit: number = 4) => {
+    noStore();
     const { data } = await supabase
         .from('projects')
         .select('*')
@@ -40,6 +42,7 @@ export const sendMail = async (
     if (!validateFields.success) {
         throw new Error('Something went wrong');
     }
+    noStore();
     const res = await fetch('https://formspree.io/f/mrgvybye', {
         method: 'POST',
         body: JSON.stringify({ ...validateFields.data }),
@@ -97,15 +100,18 @@ export const authenticate = async (
     };
 };
 export const authSignOut = async () => {
+    noStore();
     await supabase.auth.signOut();
     await signOut();
 };
 export const deleteProject = async (id: number, image: string) => {
+    noStore();
     await supabaseAdmin.storage.from('projects').remove([`images/${image}`]);
     await supabaseAdmin.from('projects').delete().eq('id', id);
     revalidatePath('/dashboard/projects');
 };
 export const getProjectById = async (id: number) => {
+    noStore();
     const { data } = await supabase.from('projects').select('*').eq('id', id);
     const validateFields = ProjectsSchema.safeParse(data);
     if (!validateFields.success) {
@@ -115,6 +121,7 @@ export const getProjectById = async (id: number) => {
 };
 
 export const increaseViewsCount = async (slug: string) => {
+    noStore();
     const { data: d } = await supabase
         .from('view_blogs')
         .select('*')

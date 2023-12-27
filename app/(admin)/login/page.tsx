@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import AdminLoginForm from '@/components/admin-login-form';
 
 const AdminLogin = async () => {
