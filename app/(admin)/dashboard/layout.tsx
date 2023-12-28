@@ -2,7 +2,7 @@ import { AdminDashboardSideBar } from '@/components';
 import Link from 'next/link';
 import { ReactNode } from 'react';
 
-const DashboarLayout = ({ children }: { children: ReactNode }) => {
+const DashboardLayout = ({ children }: { children: ReactNode }) => {
     return (
         <div className='relative w-full'>
             <nav className='fixed left-0 right-0 top-0 z-50 border-b border-b-gray-600 bg-zinc-800 px-5 py-2'>
@@ -21,4 +21,4 @@ const DashboarLayout = ({ children }: { children: ReactNode }) => {
     );
 };
 
-export default DashboarLayout;
+export default DashboardLayout;
