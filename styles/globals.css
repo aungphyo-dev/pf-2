@@ -45,15 +45,13 @@
 }
 
 .prose pre {
-    @apply overflow-x-auto rounded-lg border border-neutral-900 bg-neutral-900;
+    @apply overflow-x-auto rounded-lg border border-neutral-900 bg-neutral-700;
 }
 
 .prose code {
     @apply rounded-lg px-1 py-0.5;
 }
-.prose pre {
-    @apply bg-black text-white;
-}
+
 .prose pre code {
     @apply p-0;
     border: initial;

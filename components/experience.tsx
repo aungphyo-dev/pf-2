@@ -9,7 +9,7 @@ const Experience = () => {
     return (
         <div aria-label='experience' className='pt-12 lg:pt-24' id='experience'>
             <StickyNavigationBar name={'experience'} />
-            <ol className='group/card'>
+            <ol className='group/card1'>
                 {Experiences.map((experience) => (
                     <ExperienceCard
                         key={experience.id}
