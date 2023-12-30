@@ -35,6 +35,8 @@ const ProjectEditForm = ({ project }: { project: ProjectType }) => {
             title: project.title,
             demo: project.demo,
             description: project.description,
+            year: project.year,
+            made_at: project.made_at,
         },
     });
     const image = watch('image');
@@ -48,6 +50,8 @@ const ProjectEditForm = ({ project }: { project: ProjectType }) => {
             title: data.title,
             description: data.description,
             demo: data.demo,
+            year: data.year,
+            made_at: data.made_at,
             skills,
         };
         if (data.image?.['0']) {
@@ -162,6 +166,40 @@ const ProjectEditForm = ({ project }: { project: ProjectType }) => {
                         {...register('demo')}
                         className='block w-full rounded-md border-0 bg-gray-300 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
                     />
+                </div>
+            </div>
+            <div className='grid grid-cols-2 gap-5'>
+                <div>
+                    <label
+                        htmlFor='year'
+                        className='block text-sm font-medium leading-6 text-slate-400'
+                    >
+                        Year
+                    </label>
+                    <div className='mt-2'>
+                        <input
+                            id='year'
+                            type='text'
+                            {...register('year')}
+                            className='block w-full rounded-md border-0 bg-gray-300 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
+                        />
+                    </div>
+                </div>
+                <div>
+                    <label
+                        htmlFor='made_at'
+                        className='block text-sm font-medium leading-6 text-slate-400'
+                    >
+                        Made At
+                    </label>
+                    <div className='mt-2'>
+                        <input
+                            id='made_at'
+                            type='text'
+                            {...register('made_at')}
+                            className='block w-full rounded-md border-0 bg-gray-300 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
+                        />
+                    </div>
                 </div>
             </div>
             <div>

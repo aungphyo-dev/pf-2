@@ -1,6 +1,6 @@
 'use client';
 import { ProjectsType } from '@/types';
-import { ArrowLeft, ExternalLink } from 'lucide-react';
+import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 
 const ProjectsTable = ({ projects }: { projects: ProjectsType }) => {
@@ -21,60 +21,92 @@ const ProjectsTable = ({ projects }: { projects: ProjectsType }) => {
             <div className='px-3 md:px-5'>
                 <table
                     id='content'
-                    className='w-full border-collapse text-left'
+                    className='mt-12 w-full border-collapse text-left'
                 >
                     <thead className='sticky top-0 z-10 border-b border-slate-300/10 bg-slate-900/75 px-6 py-5 backdrop-blur'>
                         <tr>
+                            <th className='py-4 pr-8 text-sm font-semibold text-slate-200  max-w-fit lg:w-auto'>
+                                Year
+                            </th>
                             <th className='py-4 pr-8 text-sm font-semibold text-slate-200'>
                                 Project
                             </th>
                             <th className='hidden py-4 pr-8 text-sm font-semibold text-slate-200 lg:table-cell'>
+                                Made at
+                            </th>
+                            <th className='hidden py-4 pr-8 text-sm font-semibold text-slate-200 lg:table-cell'>
                                 Built with
                             </th>
-                            <th className='py-4 pr-8 text-right text-sm font-semibold text-slate-200 md:text-start'>
+                            <th className='hidden py-4 pr-8 text-sm font-semibold text-slate-200 sm:table-cell'>
                                 Link
                             </th>
                         </tr>
                     </thead>
                     <tbody>
-                        {projects.map((project) => (
+                        {projects.map((p) => (
                             <tr
-                                key={project.title}
+                                key={p.id}
                                 className='border-b border-slate-300/10 last:border-none'
                             >
+                                <td className='py-4 pr-4 align-top text-sm'>
+                                    <div className='translate-y-px text-slate-200'>
+                                        {p.year}
+                                    </div>
+                                </td>
                                 <td className='py-4 pr-4 align-top font-semibold leading-snug text-slate-200'>
                                     <div>
                                         <div className='block sm:hidden'>
-                                            <span>{project.title}</span>
+                                            <a
+                                                className='inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-slate-200 focus-visible:text-teal-300 sm:hidden group/link text-base'
+                                                href={p.demo}
+                                                target='_blank'
+                                                rel='noreferrer noopener'
+                                            >
+                                                <span className='inline-block'>
+                                                    {p.title}
+                                                    <ArrowUpRight className='inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-1 translate-y-px' />
+                                                </span>
+                                            </a>
                                         </div>
                                         <div className='hidden sm:block'>
-                                            {project.title}
+                                            {p.title}
                                         </div>
+                                    </div>
+                                </td>
+                                <td className='hidden py-4 pr-4 align-top text-sm lg:table-cell'>
+                                    <div className='translate-y-px whitespace-nowrap text-slate-200'>
+                                        {p?.made_at}
                                     </div>
                                 </td>
                                 <td className='hidden py-4 pr-4 align-top lg:table-cell'>
                                     <ul className='flex -translate-y-1.5 flex-wrap'>
-                                        {project.skills.map((skill) => (
-                                            <li
-                                                key={skill.toString()}
-                                                className='mr-1.5 mt-2'
-                                            >
+                                        {p.skills.map((s) => (
+                                            <li key={s} className='my-1 mr-1.5'>
                                                 <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 '>
-                                                    {skill}
+                                                    {s}
                                                 </div>
                                             </li>
                                         ))}
                                     </ul>
                                 </td>
-                                <td className='py-4'>
-                                    <a
-                                        href={project.demo}
-                                        target={'_blank'}
-                                        rel='noreferrer'
-                                        className='group text-white'
-                                    >
-                                        <ExternalLink className='mx-auto  transition-all duration-300 group-hover:-translate-y-1 group-hover:translate-x-2 md:mx-0' />
-                                    </a>
+                                <td className='hidden py-4 align-top sm:table-cell'>
+                                    <ul className='translate-y-1'>
+                                        <li className='mb-1 flex items-center'>
+                                            <a
+                                                className='inline-flex items-baseline font-medium leading-tight text-slate-400 hover:text-slate-200 focus-visible:text-teal-300 group/link text-sm'
+                                                href={p.demo}
+                                                target='_blank'
+                                                rel='noreferrer noopener'
+                                            >
+                                                <span>
+                                                    <span className='inline-block'>
+                                                        {p.demo.substring(8)}
+                                                        <ArrowUpRight className='inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-0.5' />
+                                                    </span>
+                                                </span>
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </td>
                             </tr>
                         ))}

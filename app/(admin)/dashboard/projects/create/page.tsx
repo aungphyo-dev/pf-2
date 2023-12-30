@@ -1,10 +1,7 @@
 'use client';
 export const revalidate = 0;
 import { supabaseAdmin } from '@/services/supabase';
-import {
-    projectCreateFormSchema,
-    projectCreateFormType,
-} from '@/types';
+import { projectCreateFormSchema, projectCreateFormType } from '@/types';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2, Plus, X } from 'lucide-react';
 import Image from 'next/image';
@@ -38,22 +35,23 @@ const ProjectCreateForm = () => {
         }
     }, [image]);
     const onSubmit = async (data: projectCreateFormType) => {
-        const fileName = Date.now() + data.image["0"].name;
+        const fileName = Date.now() + data.image['0'].name;
         const body = {
             title: data.title,
             description: data.description,
             demo: data.demo,
             skills: skills,
-            image: fileName
-        }
-        await supabaseAdmin
-            .storage
+            year: data.year,
+            made_at: data.made_at,
+            image: fileName,
+        };
+        await supabaseAdmin.storage
             .from('projects')
-            .upload(`images/${fileName}`, data.image["0"], {
+            .upload(`images/${fileName}`, data.image['0'], {
                 cacheControl: '3600',
-                upsert: false
-            })
-        await supabaseAdmin.from("projects").insert([body])
+                upsert: false,
+            });
+        await supabaseAdmin.from('projects').insert([body]);
         router.push('/dashboard/projects');
     };
     return (
@@ -83,8 +81,8 @@ const ProjectCreateForm = () => {
                             Click to upload
                         </p>
                     </div>
-                    {
-                        imageUrl && <Image
+                    {imageUrl && (
+                        <Image
                             fill
                             priority
                             sizes={'500'}
@@ -92,7 +90,7 @@ const ProjectCreateForm = () => {
                             className='w-full object-cover'
                             alt='dd'
                         />
-                    }
+                    )}
                     <input
                         {...register('image')}
                         id='dropzone-file'
@@ -150,6 +148,40 @@ const ProjectCreateForm = () => {
                         {...register('demo')}
                         className='block w-full rounded-md border-0 bg-gray-300 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
                     />
+                </div>
+            </div>
+            <div className='grid grid-cols-2 gap-5'>
+                <div>
+                    <label
+                        htmlFor='year'
+                        className='block text-sm font-medium leading-6 text-slate-400'
+                    >
+                        Year
+                    </label>
+                    <div className='mt-2'>
+                        <input
+                            id='year'
+                            type='text'
+                            {...register('year')}
+                            className='block w-full rounded-md border-0 bg-gray-300 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
+                        />
+                    </div>
+                </div>
+                <div>
+                    <label
+                        htmlFor='made_at'
+                        className='block text-sm font-medium leading-6 text-slate-400'
+                    >
+                        Made At
+                    </label>
+                    <div className='mt-2'>
+                        <input
+                            id='made_at'
+                            type='text'
+                            {...register('made_at')}
+                            className='block w-full rounded-md border-0 bg-gray-300 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
+                        />
+                    </div>
                 </div>
             </div>
             <div>

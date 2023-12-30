@@ -1,11 +1,13 @@
 import { z } from 'zod';
 export const ProjectSchema = z.object({
-    id: z.number(),
-    title: z.string(),
-    description: z.string(),
-    image: z.string(),
-    demo: z.string(),
-    skills: z.array(z.string()),
+    id: z.number().min(1),
+    title: z.string().min(1),
+    description: z.string().min(1),
+    image: z.string().min(1),
+    demo: z.string().min(1),
+    skills: z.array(z.string()).min(1),
+    year: z.string().min(1),
+    made_at: z.string().nullish(),
 });
 export const ProjectsSchema = z.array(ProjectSchema);
 export type ProjectsType = z.infer<typeof ProjectsSchema>;
@@ -53,6 +55,8 @@ export const projectCreateFormSchema = z.object({
     title: z.string().min(1),
     description: z.string().min(1),
     demo: z.string().min(1),
+    year: z.string().min(1),
+    made_at: z.string().nullish(),
     image: z
         .any()
         .refine(

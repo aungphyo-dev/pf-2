@@ -10,8 +10,10 @@ export const getAllProjects = async () => {
         .from('projects')
         .select('*')
         .order('id', { ascending: false });
+    console.log(data);
     const validateFields = ProjectsSchema.safeParse(data);
     if (!validateFields.success) {
+        console.log(validateFields.error);
         throw new Error('Something went wrong!');
     }
     return validateFields.data;
