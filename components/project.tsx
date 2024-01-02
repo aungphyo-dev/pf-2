@@ -1,4 +1,3 @@
-export const dynamic = 'force-dynamic';
 import { getProjectByLimit } from '@/actions';
 import { NavigateLink, ProjectCard, StickyNavigationBar } from '@/components';
 const Project = async () => {

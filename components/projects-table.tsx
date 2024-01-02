@@ -91,21 +91,25 @@ const ProjectsTable = ({ projects }: { projects: ProjectsType }) => {
                                 </td>
                                 <td className='hidden py-4 align-top sm:table-cell'>
                                     <ul className='translate-y-1'>
-                                        <li className='mb-1 flex items-center'>
-                                            <a
-                                                className='inline-flex items-baseline font-medium leading-tight text-slate-400 hover:text-slate-200 focus-visible:text-teal-300 group/link text-sm'
-                                                href={p.demo}
-                                                target='_blank'
-                                                rel='noreferrer noopener'
-                                            >
-                                                <span>
-                                                    <span className='inline-block'>
-                                                        {p.demo.substring(8)}
-                                                        <ArrowUpRight className='inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-0.5' />
+                                        {p?.demo && (
+                                            <li className='mb-1 flex items-center'>
+                                                <a
+                                                    className='inline-flex items-baseline font-medium leading-tight text-slate-400 hover:text-slate-200 focus-visible:text-teal-300 group/link text-sm'
+                                                    href={p.demo}
+                                                    target='_blank'
+                                                    rel='noreferrer noopener'
+                                                >
+                                                    <span>
+                                                        <span className='inline-block'>
+                                                            {p.demo.substring(
+                                                                8
+                                                            )}
+                                                            <ArrowUpRight className='inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-0.5' />
+                                                        </span>
                                                     </span>
-                                                </span>
-                                            </a>
-                                        </li>
+                                                </a>
+                                            </li>
+                                        )}
                                     </ul>
                                 </td>
                             </tr>

@@ -4,7 +4,7 @@ export const ProjectSchema = z.object({
     title: z.string().min(1),
     description: z.string().min(1),
     image: z.string().min(1),
-    demo: z.string().min(1),
+    demo: z.string().nullish(),
     skills: z.array(z.string()).min(1),
     year: z.string().min(1),
     made_at: z.string().nullish(),
@@ -54,7 +54,7 @@ const ACCEPTED_IMAGE_TYPES = ['image/jpeg', 'image/jpg', 'image/png'];
 export const projectCreateFormSchema = z.object({
     title: z.string().min(1),
     description: z.string().min(1),
-    demo: z.string().min(1),
+    demo: z.string().nullish(),
     year: z.string().min(1),
     made_at: z.string().nullish(),
     image: z

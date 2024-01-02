@@ -1,6 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+:root {
+    --sh-class: #4c97f8;
+    --sh-identifier: white;
+    --sh-keyword: #f47067;
+    --sh-string: #0fa295;
+    --sh-comment: #a19595;
+    --sh-jsxliterals: #6266d1;
+}
 
 .active .nav-indicator {
     background: rgb(226, 232, 240);
@@ -45,7 +53,7 @@
 }
 
 .prose pre {
-    @apply overflow-x-auto rounded-lg border border-neutral-900 bg-neutral-700;
+    @apply overflow-x-auto rounded-lg border border-neutral-900 bg-[#18203A];
 }
 
 .prose code {
@@ -71,7 +79,7 @@
 h2,
 h3,
 h4 {
-    @apply font-medium tracking-tighter !important;
+    @apply font-medium tracking-tighter scroll-mt-[55px]  !important;
 }
 
 .prose strong {

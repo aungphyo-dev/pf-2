@@ -24,7 +24,7 @@ const Blogs = async () => {
                         className='group mb-5 flex w-full flex-col space-y-1'
                         href={`/blogs/${post.slug}`}
                     >
-                        <div className='flex w-full flex-col lg:flex-row lg:items-center lg:justify-between'>
+                        <div className='w-full'>
                             <p className='tracking-tight lg:group-hover:text-blue-500 text-neutral-100 group-hover:text-blue-500'>
                                 {post.metadata.title}
                             </p>

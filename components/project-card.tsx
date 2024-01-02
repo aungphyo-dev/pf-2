@@ -9,13 +9,13 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
                 <div className='absolute -inset-x-4 -inset-y-4 z-0 hidden rounded-md transition motion-reduce:transition-none lg:-inset-x-6 lg:block lg:group-hover:bg-slate-800/50 lg:group-hover:shadow-[inset_0_1px_0_0_rgba(148,163,184,0.1)] lg:group-hover:drop-shadow-lg'></div>
                 <div className='z-10 sm:order-2 sm:col-span-6'>
                     <Link
-                        href={project?.demo}
+                        href={project.demo ?? '#'}
                         target={'_blank'}
                         className='group/link inline-flex items-baseline text-base font-medium leading-tight text-slate-200  hover:text-teal-300 focus-visible:text-teal-300'
                     >
                         <span className='absolute -inset-x-4 -inset-y-2.5 hidden rounded md:-inset-x-6 md:-inset-y-4 lg:block'></span>
                         <span className='inline-block'>
-                            {project?.title}
+                            {project.title}
                             <svg
                                 xmlns='http://www.w3.org/2000/svg'
                                 viewBox='0 0 20 20'

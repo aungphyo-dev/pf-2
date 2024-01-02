@@ -9,14 +9,18 @@
       <change beforePath="$PROJECT_DIR$/actions.ts" beforeDir="false" afterPath="$PROJECT_DIR$/actions.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(admin)/dashboard/projects/create/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(admin)/dashboard/projects/create/page.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/(admin)/dashboard/projects/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/(admin)/dashboard/projects/page.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/admin-dashboard-side-bar.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/admin-dashboard-side-bar.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/animation-screen.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/animation-screen.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/blog.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/blog.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/experience.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/experience.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/home-wrapper.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/home-wrapper.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogs/[slug]/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogs/[slug]/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/blogs/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/blogs/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/mdx-viewer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/mdx-viewer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/project-card.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/project-card.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/project-edit-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/project-edit-form.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/project.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/projects-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/projects-table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/theme-provider.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/theme-toggle.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/index.ts" afterDir="false" />
     </list>
@@ -124,6 +128,7 @@
       <workItem from="1703776033776" duration="4390000" />
       <workItem from="1703828491878" duration="16000" />
       <workItem from="1703932579117" duration="2086000" />
+      <workItem from="1704210807561" duration="3252000" />
     </task>
     <task id="LOCAL-00001" summary="fix: blog fix">
       <option name="closed" value="true" />
