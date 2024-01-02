@@ -52,12 +52,6 @@ const AdminDashboardTable = ({ projects }: { projects: ProjectsType }) => {
                         <td className='py-4 pr-3'>
                             <Dropdown>
                                 <div className='w-full space-y-1 py-2'>
-                                    <a
-                                        className='block px-3 py-2 text-center text-xs text-slate-300  hover:bg-zinc-400 hover:text-slate-900'
-                                        href={project.demo}
-                                    >
-                                        Demo
-                                    </a>
                                     <Link
                                         className='block px-3 py-2 text-center text-xs text-slate-300  hover:bg-zinc-400 hover:text-slate-900'
                                         href={`/dashboard/projects/${project.id}`}
