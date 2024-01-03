@@ -4,7 +4,7 @@ const Footer = () => {
             Built with{' '}
             <span className='text-slate-200'>Next.js and Tailwind CSS</span>,
             deployed with <span className='text-slate-200'>Vercel</span>. All
-            text is set in the Inter typeface.
+            text is set with geist font.
         </div>
     );
 };

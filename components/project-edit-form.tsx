@@ -1,5 +1,4 @@
 'use client';
-export const revalidate = 0;
 import { supabaseAdmin } from '@/services/supabase';
 import {
     projectCreateFormSchema,
