@@ -58,7 +58,7 @@ const ProjectsTable = ({ projects }: { projects: ProjectsType }) => {
                                         <div className='block sm:hidden'>
                                             <a
                                                 className='inline-flex items-baseline font-medium leading-tight text-slate-200 hover:text-slate-200 focus-visible:text-teal-300 sm:hidden group/link text-base'
-                                                href={p?.demo ?? "#"}
+                                                href={p?.demo ?? '#'}
                                                 target='_blank'
                                                 rel='noreferrer noopener'
                                             >

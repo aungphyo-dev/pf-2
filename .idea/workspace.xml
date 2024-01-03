@@ -6,6 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="0b6f181e-c528-46a9-8279-1f541ee0f0a8" name="Changes" comment="fix: blog fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/footer.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/project-edit-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/project-edit-form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/project.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/components/projects-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/projects-table.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +114,7 @@
       <workItem from="1703828491878" duration="16000" />
       <workItem from="1703932579117" duration="2086000" />
       <workItem from="1704210807561" duration="3252000" />
-      <workItem from="1704293165959" duration="298000" />
+      <workItem from="1704293165959" duration="732000" />
     </task>
     <task id="LOCAL-00001" summary="fix: blog fix">
       <option name="closed" value="true" />
