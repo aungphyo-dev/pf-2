@@ -18,7 +18,7 @@ const Blog = () => {
         })
         .filter((post, index) => index < 2);
     return (
-        <div data-section='blogs' className='pt-12 lg:pt-24' id='blogs'>
+        <div className='pt-12 lg:pt-24' id='blogs'>
             <StickyNavigationBar name={'blogs'} />
             <ul className='group/list1'>
                 {blog.map((blog) => (

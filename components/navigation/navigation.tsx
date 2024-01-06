@@ -2,11 +2,9 @@
 import { NavigationButton } from '@/components';
 import { navigation_items } from '@/constants/data';
 import { useEffect, useRef, useState } from 'react';
-
 const NavigationBar = () => {
     const [activeSection, setActiveSection] = useState<string>('about');
     const sections = useRef<HTMLElement[]>([]);
-
     const handleScroll = () => {
         const pageYOffset = window.scrollY;
         sections.current.forEach((section) => {
