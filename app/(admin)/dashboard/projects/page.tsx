@@ -1,6 +1,6 @@
 export const dynamic = 'force-dynamic';
 import { getAllProjects } from '@/actions';
-import AdminDashboardTable from '@/components/admin-dashboard-table';
+import AdminDashboardTable from '@/components/admin/admin-dashboard-table';
 import { Plus } from 'lucide-react';
 import Link from 'next/link';
 const DashboardProjects = async () => {

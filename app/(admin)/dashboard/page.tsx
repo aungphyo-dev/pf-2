@@ -1,5 +1,5 @@
 export const dynamic = 'force-dynamic';
-import AdminBlogsChart from '@/components/admin-blogs-chart';
+import AdminBlogsChart from '@/components/admin/admin-blogs-chart';
 import supabase from '@/services/supabase';
 import { Suspense } from 'react';
 

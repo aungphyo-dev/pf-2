@@ -1,11 +1,11 @@
 import { getProjectById } from '@/actions';
-import ProjectEditForm from '@/components/project-edit-form';
+import AdminProjectEditForm from '@/components/admin/admin-project-edit-form';
 const ProjectByID = async ({ params }: { params: { id: number } }) => {
     const { id } = params;
     const project = await getProjectById(id);
     return (
         <div>
-            <ProjectEditForm project={project} />
+            <AdminProjectEditForm project={project} />
         </div>
     );
 };

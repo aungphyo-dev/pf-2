@@ -6,15 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="0b6f181e-c528-46a9-8279-1f541ee0f0a8" name="Changes" comment="fix: blog fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/footer.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/footer.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/project-edit-form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/project-edit-form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/project.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/project.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/components/projects-table.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/components/projects-table.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/lib/utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/styles/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/styles/globals.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/types/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/types/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -75,16 +66,36 @@
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;npm.lint.executor&quot;: &quot;Run&quot;,
     &quot;ts.external.directory.path&quot;: &quot;C:\\Users\\Typle\\Desktop\\v5\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\Typle\Desktop\v5\public" />
       <recent name="C:\Users\Typle\Desktop\v5\components" />
-      <recent name="C:\Users\Typle\Desktop\v5\components\auth" />
+      <recent name="C:\Users\Typle\Desktop\v5\components\navigation" />
+      <recent name="C:\Users\Typle\Desktop\v5\components\home" />
+      <recent name="C:\Users\Typle\Desktop\v5\components\admin" />
+      <recent name="C:\Users\Typle\Desktop\v5\components\blog" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration name="lint" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="lint" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.lint" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -115,6 +126,7 @@
       <workItem from="1703932579117" duration="2086000" />
       <workItem from="1704210807561" duration="3252000" />
       <workItem from="1704293165959" duration="732000" />
+      <workItem from="1704520468763" duration="312000" />
     </task>
     <task id="LOCAL-00001" summary="fix: blog fix">
       <option name="closed" value="true" />

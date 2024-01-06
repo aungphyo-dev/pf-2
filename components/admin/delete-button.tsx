@@ -1,5 +1,5 @@
 import { deleteProject } from '@/actions';
-import { SubmitButton } from '@/components/index';
+import { SubmitButton } from '@/components';
 
 const DeleteButton = ({ id, image }: { id: number; image: string }) => {
     const deleteProjectWithId = deleteProject.bind(null, id, image);

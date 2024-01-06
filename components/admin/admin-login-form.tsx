@@ -1,6 +1,6 @@
 'use client';
 import { authenticate } from '@/actions';
-import { SubmitButton } from '@/components/index';
+import { SubmitButton } from '@/components';
 import { useFormState } from 'react-dom';
 const initialFormState = {
     errors: {},

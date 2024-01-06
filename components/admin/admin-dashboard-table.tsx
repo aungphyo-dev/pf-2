@@ -1,5 +1,5 @@
-import DeleteButton from '@/components/delete-button';
-import Dropdown from '@/components/dropdown';
+import DeleteButton from '@/components/admin/delete-button';
+import Dropdown from '@/components/admin/dropdown';
 import { ProjectsType } from '@/types';
 import Link from 'next/link';
 

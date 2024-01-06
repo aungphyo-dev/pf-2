@@ -1,5 +1,5 @@
 'use client';
-import { SignOutButton } from '@/components';
+import { AdminSignOutButton } from '@/components';
 import { dashboard_navigation_items } from '@/constants/data';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
@@ -23,7 +23,7 @@ const AdminDashboardSideBar = () => {
                 </Link>
             ))}
             <div className='mt-auto w-full px-3'>
-                <SignOutButton />
+                <AdminSignOutButton />
             </div>
         </div>
     );

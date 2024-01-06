@@ -3,7 +3,7 @@ import { NavigateLink, ProjectCard, StickyNavigationBar } from '@/components';
 const Project = async () => {
     const projects = await getProjectByLimit();
     return (
-        <div aria-label='projects' className='pt-12 lg:pt-24' id='projects'>
+        <div data-section='projects' className='pt-12 lg:pt-24' id='projects'>
             <StickyNavigationBar name={'projects'} />
             <ul className='group/list1'>
                 {projects?.map((project) => (

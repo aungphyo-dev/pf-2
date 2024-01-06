@@ -1,10 +1,8 @@
-import Image from 'next/image';
-
 export const dynamic = 'force-dynamic';
-
-import { NavigateLink, StickyNavigationBar } from '@/components/index';
+import { NavigateLink, StickyNavigationBar } from '@/components';
 import { getBlogPosts } from '@/db/blog';
 import { formatDate } from '@/lib/utils';
+import Image from 'next/image';
 import Link from 'next/link';
 
 const Blog = () => {
@@ -20,7 +18,7 @@ const Blog = () => {
         })
         .filter((post, index) => index < 2);
     return (
-        <div aria-label='blogs' className='pt-12 lg:pt-24' id='blogs'>
+        <div data-section='blogs' className='pt-12 lg:pt-24' id='blogs'>
             <StickyNavigationBar name={'blogs'} />
             <ul className='group/list1'>
                 {blog.map((blog) => (

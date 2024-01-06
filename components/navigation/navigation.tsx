@@ -1,5 +1,5 @@
 'use client';
-import { NavigationButton } from '@/components/index';
+import { NavigationButton } from '@/components';
 import { navigation_items } from '@/constants/data';
 import { useEffect, useRef, useState } from 'react';
 
@@ -22,7 +22,7 @@ const NavigationBar = () => {
 
     useEffect(() => {
         sections.current = Array.from(
-            document.querySelectorAll<HTMLElement>('[aria-label]')
+            document.querySelectorAll<HTMLElement>('[data-section]')
         );
         window.addEventListener('scroll', handleScroll);
 

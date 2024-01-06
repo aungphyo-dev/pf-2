@@ -1,4 +1,4 @@
-const Experiences = [
+const experiences = [
     {
         id: 1,
         title: 'Frontend Developer',
@@ -22,4 +22,4 @@ const Experiences = [
         skills: ['Javascript', 'Typescript', 'ReactJS', 'Redux'],
     },
 ];
-export default Experiences;
+export default experiences;

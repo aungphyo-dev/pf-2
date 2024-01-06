@@ -1,5 +1,5 @@
 export const dynamic = 'force-dynamic';
-import ViewsCounter from '@/components/views-counter';
+import ViewsCounter from '@/components/blog/views-counter';
 import { getBlogPosts } from '@/db/blog';
 import supabase from '@/services/supabase';
 import Link from 'next/link';

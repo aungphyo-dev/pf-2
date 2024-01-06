@@ -6,7 +6,7 @@ const Hero = () => {
             <div className='flex w-full flex-col items-start justify-start'>
                 <div className='mb-3'>
                     <Link
-                        href='/'
+                        href='/public'
                         className='group/typle inline-flex cursor-pointer text-3xl font-bold tracking-wide text-[#e2e8f0] lg:text-[48px] lg:text-slate-200'
                     >
                         Aung Pyae Phyo

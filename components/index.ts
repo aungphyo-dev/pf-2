@@ -1,26 +1,27 @@
-import About from '@/components/about';
-import AdminDashboardSideBar from '@/components/admin-dashboard-side-bar';
-import AdminLoginForm from '@/components/admin-login-form';
-import AnimationScreen from '@/components/animation-screen';
-import Contact from '@/components/contact';
-import Experience from '@/components/experience';
-import ExperienceCard from '@/components/experience-card';
-import Footer from '@/components/footer';
-import Hero from '@/components/hero';
-import NavigateLink from '@/components/navigate-link';
-import NavigationBar from '@/components/navigation';
-import NavigationButton from '@/components/navigation-button';
-import Project from '@/components/project';
-import ProjectCard from '@/components/project-card';
-import ProjectsTable from '@/components/projects-table';
-import SignOutButton from '@/components/sign-out-button';
-import SocialLink from '@/components/social-link';
-import StickyNavigationBar from '@/components/sticky-navigation-bar';
-import SubmitButton from '@/components/submit-button';
+import AdminDashboardSideBar from '@/components/admin/admin-dashboard-side-bar';
+import AdminLoginForm from '@/components/admin/admin-login-form';
+import AdminSignOutButton from '@/components/admin/admin-sign-out-button';
+import About from '@/components/home/about';
+import AnimationScreen from '@/components/home/animation-screen';
+import Contact from '@/components/home/contact';
+import Experience from '@/components/home/experience';
+import ExperienceCard from '@/components/home/experience-card';
+import Hero from '@/components/home/hero';
+import Footer from '@/components/navigation/footer';
+import NavigateLink from '@/components/navigation/navigate-link';
+import NavigationBar from '@/components/navigation/navigation';
+import NavigationButton from '@/components/navigation/navigation-button';
+import SocialLink from '@/components/navigation/social-link';
+import StickyNavigationBar from '@/components/navigation/sticky-navigation-bar';
+import SubmitButton from '@/components/navigation/submit-button';
+import Project from '@/components/project/project';
+import ProjectCard from '@/components/project/project-card';
+import ProjectsTable from '@/components/project/projects-table';
 export {
     About,
     AdminDashboardSideBar,
     AdminLoginForm,
+    AdminSignOutButton,
     AnimationScreen,
     Contact,
     Experience,
@@ -33,7 +34,6 @@ export {
     Project,
     ProjectCard,
     ProjectsTable,
-    SignOutButton,
     SocialLink,
     StickyNavigationBar,
     SubmitButton,

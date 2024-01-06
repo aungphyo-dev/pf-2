@@ -1,4 +1,4 @@
-import AdminProjectCreateForm from '@/components/admin-project-create-form';
+import AdminProjectCreateForm from '@/components/admin/admin-project-create-form';
 
 const ProjectCreateForm = () => {
     return <AdminProjectCreateForm />;

@@ -3,14 +3,18 @@ import {
     NavigateLink,
     StickyNavigationBar,
 } from '@/components';
-import Experiences from '../constants/Experiences';
+import experiences from '@/constants/experiences';
 
 const Experience = () => {
     return (
-        <div aria-label='experience' className='pt-12 lg:pt-24' id='experience'>
+        <div
+            data-section='experience'
+            className='pt-12 lg:pt-24'
+            id='experience'
+        >
             <StickyNavigationBar name={'experience'} />
             <ol className='group/card1'>
-                {Experiences.map((experience) => (
+                {experiences.map((experience) => (
                     <ExperienceCard
                         key={experience.id}
                         experience={experience}

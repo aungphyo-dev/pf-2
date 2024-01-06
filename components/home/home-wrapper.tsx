@@ -7,7 +7,7 @@ import {
     Hero,
     Project,
 } from '@/components';
-import Blog from '@/components/blog';
+import Blog from '@/components/blog/blog';
 import { Suspense } from 'react';
 const HomeWrapper = () => {
     return (

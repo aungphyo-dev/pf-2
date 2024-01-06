@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import BlogNavigation from '@/components/blog-navigation';
+import BlogNavigation from '@/components/blog/blog-navigation';
 
 const BlogLayout = async ({ children }: { children: ReactNode }) => {
     return (

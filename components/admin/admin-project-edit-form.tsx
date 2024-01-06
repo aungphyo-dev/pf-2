@@ -11,7 +11,7 @@ import Image from 'next/image';
 import { useRouter } from 'next/navigation';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
-const ProjectEditForm = ({ project }: { project: ProjectType }) => {
+const AdminProjectEditForm = ({ project }: { project: ProjectType }) => {
     const [imageUrl, setImageUrl] = useState('');
     const [skill, setSkill] = useState('');
     const [skills, setSkills] = useState<string[]>([...project.skills]);
@@ -242,4 +242,4 @@ const ProjectEditForm = ({ project }: { project: ProjectType }) => {
     );
 };
 
-export default ProjectEditForm;
+export default AdminProjectEditForm;
