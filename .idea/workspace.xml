@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="0b6f181e-c528-46a9-8279-1f541ee0f0a8" name="Changes" comment="fix: blog fix">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -127,6 +128,7 @@
       <workItem from="1704210807561" duration="3252000" />
       <workItem from="1704293165959" duration="732000" />
       <workItem from="1704520468763" duration="312000" />
+      <workItem from="1704538564447" duration="708000" />
     </task>
     <task id="LOCAL-00001" summary="fix: blog fix">
       <option name="closed" value="true" />
