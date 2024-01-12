@@ -26,8 +26,7 @@ const Experience = () => {
                     content={'view all my abilities'}
                     download={true}
                     link={
-                        'https://otgegesmjkdjmcppbsbl.supabase.co/storage/v1/object/public/projects/aungpyaephyo.pdf'
-                    }
+"https://lwmbtepbvffzpnixqugu.supabase.co/storage/v1/object/public/projects/aung%20pyae%20phyo.pdf"                    }
                 />
             </div>
         </div>
