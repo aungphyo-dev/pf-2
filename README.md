@@ -1,15 +1,16 @@
 ![](https://aungpyaephyo.vercel.app/_next/image?url=https%3A%2F%2Fafyxxqlmftohiygrtfjm.supabase.co%2Fstorage%2Fv1%2Fobject%2Fpublic%2Fprojects%2Fimages%2F1704215572301portfolio.png&w=1920&q=75)
 
-- **Framework**: [Next.js](https://nextjs.org/)
-- **Database**: [Supabase](https://supabase.com/)
-- **Authentication**: [NextAuth.js](https://authjs.dev/)
-- **Deployment**: [Vercel](https://vercel.com)
-- **Styling**: [Tailwind CSS](https://tailwindcss.com)
-- **Analytics**: [Vercel Analytics](https://vercel.com/analytics)
-- **Typography**: [Tailwind Typography](https://tailwindcss.com/docs/typography-plugin)
-- **MDX**: [Next Mdx Remote](https://github.com/hashicorp/next-mdx-remote)
+-   **Framework**: [Next.js](https://nextjs.org/)
+-   **Database**: [Supabase](https://supabase.com/)
+-   **Authentication**: [NextAuth.js](https://authjs.dev/)
+-   **Deployment**: [Vercel](https://vercel.com)
+-   **Styling**: [Tailwind CSS](https://tailwindcss.com)
+-   **Analytics**: [Vercel Analytics](https://vercel.com/analytics)
+-   **Typography**: [Tailwind Typography](https://tailwindcss.com/docs/typography-plugin)
+-   **MDX**: [Next Mdx Remote](https://github.com/hashicorp/next-mdx-remote)
 
 First, run the development server:
+
 ```bash
 git clone https://github.com/aungpyaephyo1412/aungpyaephyo.git
 cd aungpyaephyo
