@@ -1,5 +1,5 @@
 'use client';
-import { ProjectsType } from '@/types';
+import { ProjectsType } from '@/lib/type';
 import { ArrowLeft, ArrowUpRight } from 'lucide-react';
 import Link from 'next/link';
 

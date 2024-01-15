@@ -1,4 +1,4 @@
-import { ProjectType } from '@/types';
+import { ProjectType } from '@/lib/type';
 import Image from 'next/image';
 import Link from 'next/link';
 

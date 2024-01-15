@@ -1,6 +1,6 @@
 export const dynamic = 'force-dynamic';
 import { NavigateLink, StickyNavigationBar } from '@/components';
-import { getBlogPosts } from '@/db/blog';
+import { getBlogPosts } from '@/lib/blog';
 import { formatDate } from '@/lib/utils';
 import Image from 'next/image';
 import Link from 'next/link';

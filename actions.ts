@@ -1,7 +1,7 @@
 'use server';
 import { signIn, signOut } from '@/auth';
-import supabase, { supabaseAdmin } from '@/services/supabase';
-import { MailSchema, ProjectsSchema, UserSchema } from '@/types';
+import supabase, { supabaseAdmin } from '@/lib/supabase';
+import { MailSchema, ProjectsSchema, UserSchema } from '@/lib/type';
 import { AuthError } from 'next-auth';
 import { unstable_noStore as noStore, revalidatePath } from 'next/cache';
 export const getAllProjects = async () => {

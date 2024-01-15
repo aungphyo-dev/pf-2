@@ -1,4 +1,4 @@
-import { ExperienceType } from '@/types';
+import { ExperienceType } from '@/lib/type';
 import { ArrowUpRight } from 'lucide-react';
 
 const ExperienceCard = ({

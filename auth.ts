@@ -1,8 +1,8 @@
-import supabase from '@/services/supabase';
-import { AuthUserType } from '@/types';
+import supabase from '@/lib/supabase';
+import { AuthUserType } from '@/lib/type';
 import NextAuth, { User } from 'next-auth';
 import Credentials from 'next-auth/providers/credentials';
-import { authConfig } from './auth.config';
+import { authConfig } from './lib/auth.config';
 
 declare module '@auth/core/types' {
     interface Session {
@@ -62,7 +62,7 @@ export const { auth, signIn, signOut } = NextAuth({
             }
             return token;
         },
-        async session({ session, token, user }) {
+        async session({ session, token }) {
             if (token)
                 return {
                     ...session,

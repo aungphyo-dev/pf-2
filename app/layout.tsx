@@ -3,7 +3,7 @@ import { SpeedInsights } from '@vercel/speed-insights/next';
 import { GeistSans } from 'geist/font/sans';
 import type { Metadata } from 'next';
 import { ReactNode } from 'react';
-import '../styles/globals.css';
+import './globals.css';
 
 export const metadata: Metadata = {
     metadataBase: new URL('https://aungpyaephyo.vercel.app'),

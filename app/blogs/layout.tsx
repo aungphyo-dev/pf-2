@@ -1,7 +1,10 @@
+import BlogNavigation from '@/components/blog/blog-navigation';
 import { ReactNode } from 'react';
 
-import BlogNavigation from '@/components/blog/blog-navigation';
-
+export const metadata = {
+    title: 'Blog',
+    description: 'Read my thoughts on software development, design, and more.',
+};
 const BlogLayout = async ({ children }: { children: ReactNode }) => {
     return (
         <section className='px-5 lg:px-12 bg-slate-900'>

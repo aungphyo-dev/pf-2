@@ -2,9 +2,9 @@ export const dynamic = 'force-dynamic';
 import { increaseViewsCount } from '@/actions';
 import { MdxViewer } from '@/components/blog/mdx-viewer';
 import ViewsCounter from '@/components/blog/views-counter';
-import { getBlogPosts } from '@/db/blog';
+import { getBlogPosts } from '@/lib/blog';
+import supabase from '@/lib/supabase';
 import { formatDate } from '@/lib/utils';
-import supabase from '@/services/supabase';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
 

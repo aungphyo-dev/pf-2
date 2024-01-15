@@ -1,6 +1,6 @@
 'use client';
-import { supabaseAdmin } from '@/services/supabase';
-import { projectCreateFormSchema, projectCreateFormType } from '@/types';
+import { supabaseAdmin } from '@/lib/supabase';
+import { projectCreateFormSchema, projectCreateFormType } from '@/lib/type';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { Loader2, Plus, X } from 'lucide-react';
 import Image from 'next/image';

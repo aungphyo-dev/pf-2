@@ -1,7 +1,7 @@
 export const dynamic = 'force-dynamic';
 import ViewsCounter from '@/components/blog/views-counter';
-import { getBlogPosts } from '@/db/blog';
-import supabase from '@/services/supabase';
+import { getBlogPosts } from '@/lib/blog';
+import supabase from '@/lib/supabase';
 import Link from 'next/link';
 import { Suspense } from 'react';
 const Blogs = async () => {

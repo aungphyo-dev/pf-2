@@ -1,6 +1,6 @@
 import DeleteButton from '@/components/admin/delete-button';
 import Dropdown from '@/components/admin/dropdown';
-import { ProjectsType } from '@/types';
+import { ProjectsType } from '@/lib/type';
 import Link from 'next/link';
 
 const AdminDashboardTable = ({ projects }: { projects: ProjectsType }) => {
