@@ -18,12 +18,12 @@ const ProjectsTable = ({ projects }: { projects: ProjectsType }) => {
                     All Projects
                 </h1>
             </div>
-            <div className='px-3 md:px-5'>
+            <div className='w-full px-3 md:px-5'>
                 <table
                     id='content'
                     className='mt-12 w-full border-collapse text-left'
                 >
-                    <thead className='sticky top-0 z-10 border-b border-slate-300/10 bg-slate-900/75 px-6 py-5 backdrop-blur'>
+                    <thead className='sticky top-0 z-10 border-b border-slate-300/10 bg-slate-900/75 px-6 md:px-0 py-5 backdrop-blur'>
                         <tr>
                             <th className='py-4 pr-8 text-sm font-semibold text-slate-200  max-w-fit lg:w-auto'>
                                 Year
@@ -68,7 +68,7 @@ const ProjectsTable = ({ projects }: { projects: ProjectsType }) => {
                                                 </span>
                                             </a>
                                         </div>
-                                        <div className='hidden sm:block'>
+                                        <div className='hidden sm:block whitespace-nowrap'>
                                             {p.title}
                                         </div>
                                     </div>
@@ -90,27 +90,19 @@ const ProjectsTable = ({ projects }: { projects: ProjectsType }) => {
                                     </ul>
                                 </td>
                                 <td className='hidden py-4 align-top sm:table-cell'>
-                                    <ul className='translate-y-1'>
-                                        {p?.demo && (
-                                            <li className='mb-1 flex items-center'>
-                                                <a
-                                                    className='inline-flex items-baseline font-medium leading-tight text-slate-400 hover:text-slate-200 focus-visible:text-teal-300 group/link text-sm'
-                                                    href={p.demo}
-                                                    target='_blank'
-                                                    rel='noreferrer noopener'
-                                                >
-                                                    <span>
-                                                        <span className='inline-block'>
-                                                            {p.demo.substring(
-                                                                8
-                                                            )}
-                                                            <ArrowUpRight className='inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-0.5' />
-                                                        </span>
-                                                    </span>
-                                                </a>
-                                            </li>
-                                        )}
-                                    </ul>
+                                    {p?.demo && (
+                                        <a
+                                            className='flex items-center font-medium leading-tight text-slate-400 hover:text-slate-200 focus-visible:text-teal-300 group/link text-sm'
+                                            href={p.demo}
+                                            target='_blank'
+                                            rel='noreferrer noopener'
+                                        >
+                                            <span className='whitespace-nowrap'>
+                                                {p.demo.substring(8)}
+                                            </span>
+                                            <ArrowUpRight className='inline-block h-4 w-4 shrink-0 transition-transform group-hover/link:-translate-y-1 group-hover/link:translate-x-1 group-focus-visible/link:-translate-y-1 group-focus-visible/link:translate-x-1 motion-reduce:transition-none ml-0.5' />
+                                        </a>
+                                    )}
                                 </td>
                             </tr>
                         ))}
