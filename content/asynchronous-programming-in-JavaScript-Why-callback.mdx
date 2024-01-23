@@ -11,10 +11,10 @@ Asynchronous operation တွေရဲ့ nature က အလုပ်ကိုခ
 
 ```js
 function delayFun() {
-    setTimeout(() => {
-        console.log('Executed after 3 seconds');
-        return 200;
-    }, 3000);
+  setTimeout(() => {
+    console.log('Executed after 3 seconds');
+    return 200;
+  }, 3000);
 }
 let result = delayFun();
 console.log('after calling delay fun');
@@ -28,13 +28,13 @@ console.log('after calling delay fun');
 
 ```js
 function callback(data) {
-    console.log('Data received by callback ', data);
+  console.log('Data received by callback ', data);
 }
 function delayFun(cb) {
-    setTimeout(() => {
-        console.log('Executed after 3 seconds');
-        cb(200);
-    }, 3000);
+  setTimeout(() => {
+    console.log('Executed after 3 seconds');
+    cb(200);
+  }, 3000);
 }
 delayFun(callback);
 console.log('after calling delay fun');

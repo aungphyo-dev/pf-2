@@ -2,20 +2,20 @@
 @tailwind components;
 @tailwind utilities;
 :root {
-    --sh-class: #4c97f8;
-    --sh-identifier: white;
-    --sh-keyword: #f47067;
-    --sh-string: #0fa295;
-    --sh-comment: #a19595;
-    --sh-jsxliterals: #6266d1;
+  --sh-class: #4c97f8;
+  --sh-identifier: white;
+  --sh-keyword: #f47067;
+  --sh-string: #0fa295;
+  --sh-comment: #a19595;
+  --sh-jsxliterals: #6266d1;
 }
 
 .active .nav-indicator {
-    background: rgb(226, 232, 240);
-    width: 4rem;
+  background: rgb(226, 232, 240);
+  width: 4rem;
 }
 .active .nav-text {
-    color: rgb(226, 232, 240);
+  color: rgb(226, 232, 240);
 }
 
 /*::-webkit-scrollbar {*/
@@ -26,101 +26,101 @@
 /*  -ms-overflow-style: none;*/
 /*}*/
 .prose .anchor {
-    @apply invisible absolute no-underline;
-    cursor: pointer;
+  @apply invisible absolute no-underline;
+  cursor: pointer;
 
-    margin-left: -1em;
-    padding-right: 0.5em;
-    width: 80%;
-    max-width: 700px;
+  margin-left: -1em;
+  padding-right: 0.5em;
+  width: 80%;
+  max-width: 700px;
 }
 
 .anchor:hover {
-    @apply visible;
+  @apply visible;
 }
 
 .prose a {
-    @apply decoration-neutral-400 decoration-[0.1em] underline-offset-2 transition-all dark:decoration-neutral-600;
+  @apply decoration-neutral-400 decoration-[0.1em] underline-offset-2 transition-all dark:decoration-neutral-600;
 }
 
 .prose .anchor:after {
-    @apply text-neutral-300 dark:text-neutral-700;
-    content: '#';
+  @apply text-neutral-300 dark:text-neutral-700;
+  content: '#';
 }
 
 .prose *:hover > .anchor {
-    @apply visible;
+  @apply visible;
 }
 
 .prose pre {
-    @apply overflow-x-auto rounded-lg border border-neutral-900 bg-[#18203A];
+  @apply overflow-x-auto rounded-lg border border-neutral-900 bg-[#18203A];
 }
 
 .prose code {
-    @apply rounded-lg px-1 py-0.5;
+  @apply rounded-lg px-1 py-0.5;
 }
 
 .prose pre code {
-    @apply p-0;
-    border: initial;
-    line-height: 1.5;
+  @apply p-0;
+  border: initial;
+  line-height: 1.5;
 }
 
 .prose code span {
-    @apply font-medium;
+  @apply font-medium;
 }
 
 .prose img {
-    /* Don't apply styles to next/image */
-    @apply m-0;
+  /* Don't apply styles to next/image */
+  @apply m-0;
 }
 
 .prose h1,
 h2,
 h3,
 h4 {
-    @apply font-medium tracking-tighter scroll-mt-[55px]  !important;
+  @apply font-medium tracking-tighter scroll-mt-[55px]  !important;
 }
 
 .prose strong {
-    @apply font-medium;
+  @apply font-medium;
 }
 
 .prose > :first-child {
-    /* Override removing top margin, causing layout shift */
-    margin-top: 1.25em !important;
-    margin-bottom: 1.25em !important;
+  /* Override removing top margin, causing layout shift */
+  margin-top: 1.25em !important;
+  margin-bottom: 1.25em !important;
 }
 
 pre::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 pre {
-    -ms-overflow-style: none; /* IE and Edge */
-    scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
 }
 
 /* Remove Safari input shadow on mobile */
 input[type='text'],
 input[type='email'] {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .prose .tweet a {
-    font-weight: 500;
-    text-decoration: inherit;
+  font-weight: 500;
+  text-decoration: inherit;
 }
 
 .prose table {
-    display: block;
-    max-width: fit-content;
-    overflow-x: auto;
-    white-space: nowrap;
+  display: block;
+  max-width: fit-content;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .prose .callout > p {
-    margin: 0 !important;
+  margin: 0 !important;
 }

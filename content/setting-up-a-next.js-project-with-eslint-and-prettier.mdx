@@ -27,7 +27,7 @@ pnpm add -D eslint-config-prettier
 
 ```json
 {
-    "extends": ["next", "prettier"]
+  "extends": ["next", "prettier"]
 }
 ```
 
@@ -43,18 +43,18 @@ tailwind.config.j
 
 ```js
 module.exports = {
-    content: [
-        './app/**/*.{js,ts,jsx,tsx}',
-        './pages/**/*.{js,ts,jsx,tsx}',
-        './components/**/*.{js,ts,jsx,tsx}',
+  content: [
+    './app/**/*.{js,ts,jsx,tsx}',
+    './pages/**/*.{js,ts,jsx,tsx}',
+    './components/**/*.{js,ts,jsx,tsx}',
 
-        // Or if using \`src\` directory:
-        './src/**/*.{js,ts,jsx,tsx}',
-    ],
-    theme: {
-        extend: {},
-    },
-    plugins: [],
+    // Or if using \`src\` directory:
+    './src/**/*.{js,ts,jsx,tsx}',
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
 };
 ```
 
@@ -78,12 +78,12 @@ touch .prettierrc.json
 
 ```json
 {
-    "trailingComma": "es5",
-    "semi": true,
-    "tabWidth": 2,
-    "singleQuote": true,
-    "jsxSingleQuote": true,
-    "plugins": ["prettier-plugin-tailwindcss"]
+  "trailingComma": "es5",
+  "semi": true,
+  "tabWidth": 2,
+  "singleQuote": true,
+  "jsxSingleQuote": true,
+  "plugins": ["prettier-plugin-tailwindcss"]
 }
 ```
 

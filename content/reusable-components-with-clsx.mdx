@@ -48,7 +48,7 @@ import { clsx, ClassValue } from 'clsx';
 import { twMerge } from 'tailwind-merge';
 
 export function cn(...inputs: ClassValue[]) {
-    return twMerge(clsx(inputs));
+  return twMerge(clsx(inputs));
 }
 ```
 
@@ -61,45 +61,45 @@ import { cn } from '../lib/util';
 
 // Customized navigation variations
 const buttonVariants = cva(
-    `px-3 py-2 rounded-xl transition-all hove:ring-2 ring-indigo-300 hover:text-white`,
-    {
-        variants: {
-            variant: {
-                primary: 'bg-blue-400',
-                danger: 'bg-red-500',
-                alert: 'bg-yellow-500',
-            },
-            size: {
-                small: 'py-2 px-4',
-                large: 'text-xl py-3 px-6',
-            },
-        },
-        defaultVariants: {
-            size: 'small',
-            variant: 'primary',
-        },
-    }
+  `px-3 py-2 rounded-xl transition-all hove:ring-2 ring-indigo-300 hover:text-white`,
+  {
+    variants: {
+      variant: {
+        primary: 'bg-blue-400',
+        danger: 'bg-red-500',
+        alert: 'bg-yellow-500',
+      },
+      size: {
+        small: 'py-2 px-4',
+        large: 'text-xl py-3 px-6',
+      },
+    },
+    defaultVariants: {
+      size: 'small',
+      variant: 'primary',
+    },
+  }
 );
 
 export interface ButtonProps
-    extends ButtonHTMLAttributes<HTMLButtonElement>,
-        VariantProps<typeof buttonVariants> {
-    ref?: React.Ref<HTMLButtonElement>;
+  extends ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  ref?: React.Ref<HTMLButtonElement>;
 }
 
 const Button: FC<ButtonProps> = forwardRef(
-    ({ size, variant, className, children, ...props }, ref) => {
-        return (
-            <button
-                ref={ref}
-                type='button'
-                className={cn(buttonVariants({ className, variant, size }))}
-                {...props}
-            >
-                {children}
-            </button>
-        );
-    }
+  ({ size, variant, className, children, ...props }, ref) => {
+    return (
+      <button
+        ref={ref}
+        type='button'
+        className={cn(buttonVariants({ className, variant, size }))}
+        {...props}
+      >
+        {children}
+      </button>
+    );
+  }
 );
 
 export default Button;
