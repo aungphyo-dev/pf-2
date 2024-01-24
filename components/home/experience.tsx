@@ -9,7 +9,7 @@ const Experience = () => {
   return (
     <div data-section='experience' className='pt-12 lg:pt-24' id='experience'>
       <StickyNavigationBar name={'experience'} />
-      <ol className='group/card1'>
+      <ol className='group/card'>
         {experiences.map((experience) => (
           <ExperienceCard key={experience.id} experience={experience} />
         ))}
