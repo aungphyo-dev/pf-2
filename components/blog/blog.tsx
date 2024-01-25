@@ -17,7 +17,7 @@ const Blog = () => {
   return (
     <div className='pt-12 lg:pt-24' id='blogs'>
       <StickyNavigationBar name={'blogs'} />
-      <ul className='group/list1'>
+      <ul className='group/list'>
         {blog.map((blog) => (
           <li key={blog.slug} className='mb-12'>
             <div className='group relative grid grid-cols-8 gap-4 transition-all sm:gap-8 md:gap-4 lg:hover:!opacity-100 lg:group-hover/list:opacity-50'>
