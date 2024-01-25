@@ -26,16 +26,8 @@ const Hero = () => {
         <div>
           <div className='flex items-center justify-center space-x-4'>
             <SocialLink
-              link='https://www.facebook.com/aungpyaephyo1412/'
-              icon={'facebook'}
-            />
-            <SocialLink
               link='https://www.github.com/aungpyaephyo1412/'
               icon={'github'}
-            />
-            <SocialLink
-              link='https://www.instagram.com/aungpyaephyo1412/'
-              icon={'instagram'}
             />
             <SocialLink
               link='https://www.twitter.com/typle_x/'

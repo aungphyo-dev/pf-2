@@ -70,7 +70,6 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
             fill
             priority
             sizes={'500'}
-            style={{ objectFit: 'cover' }}
             src={`${process.env.NEXT_PUBLIC_SUPABASE_IMAGE_URL}${project.image}`}
             alt={'IMAGE'}
           />
