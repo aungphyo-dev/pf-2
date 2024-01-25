@@ -1,7 +1,6 @@
 import {
   About,
   AnimationScreen,
-  Contact,
   Experience,
   Footer,
   Hero,

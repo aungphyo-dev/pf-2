@@ -4,7 +4,8 @@ const Footer = () => {
       Built with{' '}
       <span className='text-slate-200'>Next.js and Tailwind CSS</span>, deployed
       with <span className='text-slate-200'>Vercel</span>. All text is set with
-      geist font. Coded with <span className='text-slate-200'>Webstorm</span> IDE.
+      geist font. Coded with <span className='text-slate-200'>Webstorm</span>{' '}
+      IDE.
     </div>
   );
 };
