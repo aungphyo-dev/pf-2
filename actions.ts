@@ -1,9 +1,19 @@
 'use server';
 import { signIn, signOut } from '@/auth';
 import supabase, { supabaseAdmin } from '@/lib/supabase';
-import { MailSchema, ProjectsSchema, UserSchema } from '@/lib/type';
+import {
+  ProjectsSchema,
+  UserSchema,
+  projectCreateSchema,
+  projectEditSchema,
+} from '@/lib/type';
 import { AuthError } from 'next-auth';
 import { unstable_noStore as noStore, revalidatePath } from 'next/cache';
+import { redirect } from 'next/navigation';
+interface PrevState {
+  errors: {};
+  message: null | string;
+}
 export const getAllProjects = async () => {
   const { data } = await supabase
     .from('projects')
@@ -27,41 +37,101 @@ export const getProjectByLimit = async (limit: number = 4) => {
   }
   return validateFields.data;
 };
-export const sendMail = async (
-  prevstate: null | string,
+export const deleteProject = async (id: number, image: string) => {
+  noStore();
+  await supabaseAdmin.storage.from('projects').remove([`images/${image}`]);
+  await supabaseAdmin.from('projects').delete().eq('id', id);
+  revalidatePath('/');
+  revalidatePath('/projects');
+  revalidatePath('/dashboard/projects');
+};
+export const updateProject = async (
+  id: number,
+  prev: PrevState,
   formData: FormData
-): Promise<string> => {
-  const validateFields = MailSchema.safeParse({
-    name: formData.get('name'),
-    email: formData.get('email'),
-    message: formData.get('message'),
-    question: formData.get('question'),
+): Promise<PrevState> => {
+  const validateFields = projectEditSchema.safeParse({
+    title: formData.get('title'),
+    description: formData.get('description'),
+    demo: formData.get('demo'),
+    year: formData.get('year'),
+    made_at: formData.get('made_at'),
+    skills: formData.get('skills'),
+    image: formData.get('image'),
   });
   if (!validateFields.success) {
-    throw new Error('Something went wrong');
+    return {
+      message: 'Error',
+      errors: validateFields.error.flatten().fieldErrors,
+    };
   }
-  const res = await fetch('https://formspree.io/f/mrgvybye', {
-    method: 'POST',
-    body: JSON.stringify({ ...validateFields.data }),
-    headers: {
-      'Content-Type': 'application/json',
-      Accept: 'application/json',
-    },
-    cache: 'no-cache',
-  });
-  if (!res.ok) {
-    throw new Error('Something went wrong');
-  }
-  return 'Successfully';
+  const data = validateFields.data;
+  const fileName = Date.now() + data.image['name'];
+  noStore();
+  await supabaseAdmin.storage
+    .from('projects')
+    .upload(`images/${fileName}`, data.image, {
+      cacheControl: '3600',
+      upsert: true,
+    });
+  await supabaseAdmin
+    .from('projects')
+    .update([{ ...data, image: fileName }])
+    .eq('id', id);
+  revalidatePath('/');
+  revalidatePath('/projects');
+  revalidatePath('/dashboard');
+  revalidatePath('/dashboard/projects');
+  redirect('/dashboard/projects');
 };
-interface loginPrevState {
-  errors: {};
-  message: null | string;
-}
-export const authenticate = async (
-  prev: loginPrevState,
+export const getProjectById = async (id: number) => {
+  noStore();
+  const { data } = await supabase.from('projects').select('*').eq('id', id);
+  const validateFields = ProjectsSchema.safeParse(data);
+  if (!validateFields.success) {
+    throw new Error('Something went wrong!');
+  }
+  return validateFields.data[0];
+};
+export const createProject = async (
+  prev: PrevState,
   formData: FormData
-): Promise<loginPrevState> => {
+): Promise<PrevState> => {
+  const validateFields = projectCreateSchema.safeParse({
+    title: formData.get('title'),
+    description: formData.get('description'),
+    demo: formData.get('demo'),
+    year: formData.get('year'),
+    made_at: formData.get('made_at'),
+    skills: formData.get('skills'),
+    image: formData.get('image'),
+  });
+  if (!validateFields.success) {
+    return {
+      message: 'Error',
+      errors: validateFields.error.flatten().fieldErrors,
+    };
+  }
+  const data = validateFields.data;
+  const fileName = Date.now() + data.image['name'];
+  noStore();
+  await supabaseAdmin.storage
+    .from('projects')
+    .upload(`images/${fileName}`, data.image, {
+      cacheControl: '3600',
+      upsert: false,
+    });
+  await supabaseAdmin.from('projects').insert([{ ...data, image: fileName }]);
+  revalidatePath('/');
+  revalidatePath('/projects');
+  revalidatePath('/dashboard');
+  revalidatePath('/dashboard/projects');
+  redirect('/dashboard/projects');
+};
+export const authenticate = async (
+  prev: PrevState,
+  formData: FormData
+): Promise<PrevState> => {
   const validateFields = UserSchema.safeParse({
     email: formData.get('email'),
     password: formData.get('password'),
@@ -101,22 +171,6 @@ export const authSignOut = async () => {
   await supabase.auth.signOut();
   await signOut();
 };
-export const deleteProject = async (id: number, image: string) => {
-  noStore();
-  await supabaseAdmin.storage.from('projects').remove([`images/${image}`]);
-  await supabaseAdmin.from('projects').delete().eq('id', id);
-  revalidatePath('/dashboard/projects');
-  revalidatePath('/');
-};
-export const getProjectById = async (id: number) => {
-  const { data } = await supabase.from('projects').select('*').eq('id', id);
-  const validateFields = ProjectsSchema.safeParse(data);
-  if (!validateFields.success) {
-    throw new Error('Something went wrong!');
-  }
-  return validateFields.data[0];
-};
-
 export const increaseViewsCount = async (slug: string) => {
   noStore();
   const { data: d } = await supabase

@@ -11,7 +11,7 @@ const AnimationScreen = () => {
         easing: 'linear',
         duration: 0,
         delay: 0,
-        background: `radial-gradient(600px at ${event.clientX}px ${event.clientY}px, rgba(29, 78, 216, 0.10), transparent 80%)`,
+        background: `radial-gradient(600px circle at ${event.clientX}px ${event.clientY}px, rgba(29, 78, 216, 0.10), transparent 80%)`,
       });
     };
     window.addEventListener('mousemove', handleMouseMove);

@@ -1,11 +1,10 @@
-export const dynamic = 'force-dynamic';
 import ViewsCounter from '@/components/blog/views-counter';
 import { getBlogPosts } from '@/lib/blog';
 import supabase from '@/lib/supabase';
 import Link from 'next/link';
 import { Suspense } from 'react';
 const Blogs = async () => {
-  let allBlogs = getBlogPosts();
+  const allBlogs = getBlogPosts();
   return (
     <div className='mx-auto w-full max-w-screen-md'>
       {allBlogs

@@ -1,4 +1,3 @@
-export const dynamic = 'force-dynamic';
 import { NavigateLink, StickyNavigationBar } from '@/components';
 import { getBlogPosts } from '@/lib/blog';
 import { formatDate } from '@/lib/utils';

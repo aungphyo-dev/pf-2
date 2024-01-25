@@ -5,14 +5,55 @@ export const ProjectSchema = z.object({
   description: z.string().min(1),
   image: z.string().min(1),
   demo: z.string().nullish(),
-  skills: z.array(z.string()).min(1),
+  skills: z.string().min(1),
   year: z.string().min(1),
   made_at: z.string().nullish(),
 });
+export type ProjectType = z.infer<typeof ProjectSchema>;
 export const ProjectsSchema = z.array(ProjectSchema);
 export type ProjectsType = z.infer<typeof ProjectsSchema>;
-export type ProjectType = z.infer<typeof ProjectSchema>;
 
+const MAX_FILE_SIZE = 5000000;
+const ACCEPTED_IMAGE_TYPES = ['image/jpeg', 'image/jpg', 'image/png'];
+
+export const projectCreateSchema = z.object({
+  title: z.string().min(1),
+  description: z.string().min(1),
+  demo: z.string().nullish(),
+  year: z.string().min(1),
+  made_at: z.string().nullish(),
+  image: z
+    .any()
+    .refine((file) => file.size <= MAX_FILE_SIZE, {
+      message: 'Max file size is 5MB.',
+    })
+    .refine((file) => ACCEPTED_IMAGE_TYPES.includes(file.type), {
+      message: '.jpg, .jpeg, .png and .webp files are accepted.',
+    }),
+  skills: z.string().min(1),
+});
+
+export type projectCreateType = z.infer<typeof projectCreateSchema>;
+
+export const projectEditSchema = z.object({
+  title: z.string().min(1),
+  description: z.string().min(1),
+  demo: z.string().nullish(),
+  year: z.string().min(1),
+  made_at: z.string().nullish(),
+  image: z
+    .any()
+    .refine((file) => (file ? file.size <= MAX_FILE_SIZE : true), {
+      message: 'Max file size is 5MB.',
+    })
+    .refine(
+      (file) => (file ? ACCEPTED_IMAGE_TYPES.includes(file.type) : true),
+      {
+        message: '.jpg, .jpeg, .png and .webp files are accepted.',
+      }
+    ),
+  skills: z.string().min(1),
+});
 export const ExperienceSchema = z.object({
   id: z.number(),
   title: z.string().min(1),
@@ -24,14 +65,6 @@ export const ExperienceSchema = z.object({
   skills: z.array(z.string()).min(1),
 });
 export type ExperienceType = z.infer<typeof ExperienceSchema>;
-
-export const MailSchema = z.object({
-  name: z.string().min(1),
-  email: z.string().min(1),
-  message: z.string().min(1),
-  question: z.string().min(1),
-});
-export type MailType = z.infer<typeof MailSchema>;
 
 export const UserSchema = z.object({
   email: z.string().email().min(1),
@@ -47,31 +80,3 @@ export const AuthUserSchema = z.object({
 });
 
 export type AuthUserType = z.infer<typeof AuthUserSchema>;
-
-const MAX_FILE_SIZE = 5000000;
-const ACCEPTED_IMAGE_TYPES = ['image/jpeg', 'image/jpg', 'image/png'];
-
-export const projectCreateFormSchema = z.object({
-  title: z.string().min(1),
-  description: z.string().min(1),
-  demo: z.string().nullish(),
-  year: z.string().min(1),
-  made_at: z.string().nullish(),
-  image: z
-    .any()
-    .refine(
-      (file) => (file.length > 0 ? file['0'].size <= MAX_FILE_SIZE : true),
-      {
-        message: 'Max file size is 5MB.',
-      }
-    )
-    .refine(
-      (file) =>
-        file.length > 0 ? ACCEPTED_IMAGE_TYPES.includes(file['0'].type) : true,
-      {
-        message: '.jpg, .jpeg, .png and .webp files are accepted.',
-      }
-    ),
-});
-
-export type projectCreateFormType = z.infer<typeof projectCreateFormSchema>;

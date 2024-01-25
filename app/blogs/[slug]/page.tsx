@@ -1,4 +1,3 @@
-export const dynamic = 'force-dynamic';
 import { increaseViewsCount } from '@/actions';
 import { MdxViewer } from '@/components/blog/mdx-viewer';
 import ViewsCounter from '@/components/blog/views-counter';
@@ -7,10 +6,9 @@ import supabase from '@/lib/supabase';
 import { formatDate } from '@/lib/utils';
 import { notFound } from 'next/navigation';
 import { Suspense } from 'react';
-
-const BlogById = async ({ params }: { params: { slug: string } }) => {
-  const { slug } = params;
-  let post = getBlogPosts().find((post) => post.slug === slug);
+const BlogById = async ({ params: { slug } }: { params: { slug: string } }) => {
+  await increaseViewsCount(slug);
+  const post = getBlogPosts().find((post) => post.slug === slug);
   if (!post) {
     notFound();
   }
@@ -33,7 +31,6 @@ const BlogById = async ({ params }: { params: { slug: string } }) => {
 
 export default BlogById;
 async function Views({ slug }: { slug: string }) {
-  await increaseViewsCount(slug);
   const { data } = await supabase
     .from('view_blogs')
     .select('*')

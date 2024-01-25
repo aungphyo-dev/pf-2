@@ -35,7 +35,7 @@ const AdminDashboardTable = ({ projects }: { projects: ProjectsType }) => {
             </td>
             <td className='hidden py-4 pr-4 align-top lg:table-cell'>
               <ul className='flex -translate-y-1.5 flex-wrap'>
-                {project.skills.map((skill) => (
+                {project.skills.split(',').map((skill) => (
                   <li key={skill.toString()} className='mr-1.5 mt-2'>
                     <div className='flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300 '>
                       {skill}

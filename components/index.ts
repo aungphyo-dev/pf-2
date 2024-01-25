@@ -3,7 +3,6 @@ import AdminLoginForm from '@/components/admin/admin-login-form';
 import AdminSignOutButton from '@/components/admin/admin-sign-out-button';
 import About from '@/components/home/about';
 import AnimationScreen from '@/components/home/animation-screen';
-import Contact from '@/components/home/contact';
 import Experience from '@/components/home/experience';
 import ExperienceCard from '@/components/home/experience-card';
 import Hero from '@/components/home/hero';
@@ -23,7 +22,6 @@ export {
   AdminLoginForm,
   AdminSignOutButton,
   AnimationScreen,
-  Contact,
   Experience,
   ExperienceCard,
   Footer,

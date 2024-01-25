@@ -1,71 +1,32 @@
 'use client';
-import { supabaseAdmin } from '@/lib/supabase';
-import {
-  projectCreateFormSchema,
-  projectCreateFormType,
-  ProjectType,
-} from '@/lib/type';
-import { zodResolver } from '@hookform/resolvers/zod';
-import { Loader2, Plus, X } from 'lucide-react';
+import { updateProject } from '@/actions';
+import { SubmitButton } from '@/components';
+import { ProjectType } from '@/lib/type';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
-import { useEffect, useState } from 'react';
-import { useForm } from 'react-hook-form';
+import { useState } from 'react';
+import { useFormState } from 'react-dom';
+const initialFormState = {
+  errors: {},
+  message: null,
+};
 const AdminProjectEditForm = ({ project }: { project: ProjectType }) => {
   const [imageUrl, setImageUrl] = useState('');
-  const [skill, setSkill] = useState('');
-  const [skills, setSkills] = useState<string[]>([...project.skills]);
-  const router = useRouter();
-  const addSkills = () => {
-    setSkills((prevState) => [...prevState, skill]);
-    setSkill('');
-  };
-  const removeSkill = (skill: string) => {
-    setSkills((prevState) => prevState.filter((prev) => prev !== skill));
-  };
-  const {
-    register,
-    handleSubmit,
-    watch,
-    formState: { isSubmitting },
-  } = useForm<projectCreateFormType>({
-    resolver: zodResolver(projectCreateFormSchema),
-    defaultValues: {
-      title: project.title,
-      demo: project.demo,
-      description: project.description,
-      year: project.year,
-      made_at: project.made_at,
-    },
-  });
-  const image = watch('image');
-  useEffect(() => {
-    if (image && image.length > 0) {
-      setImageUrl(URL.createObjectURL(image['0']));
-    }
-  }, [image]);
-  const onSubmit = async (data: projectCreateFormType) => {
-    const newData = {
-      title: data.title,
-      description: data.description,
-      demo: data.demo,
-      year: data.year,
-      made_at: data.made_at,
-      skills,
-    };
-    if (data.image?.['0']) {
-      await supabaseAdmin.storage
-        .from('projects')
-        .upload(`images/${project.image}`, data.image?.['0'], {
-          cacheControl: '3600',
-          upsert: true,
-        });
-    }
-    await supabaseAdmin.from('projects').update([newData]).eq('id', project.id);
-    router.push('/dashboard/projects');
-  };
+  const updateProjectWithId = updateProject.bind(null, project.id as number);
+  const [errorMessage, dispatch] = useFormState(
+    updateProjectWithId,
+    initialFormState
+  );
   return (
-    <form onSubmit={handleSubmit(onSubmit)} className='pb-20 space-y-5'>
+    <form action={dispatch} className='pb-20 space-y-5'>
+      {errorMessage.message && (
+        <div
+          className='mb-4 rounded-lg bg-red-50 p-4 text-sm text-red-800 dark:bg-gray-800 dark:text-red-400'
+          role='alert'
+        >
+          <span className='font-medium'>Error alert!</span>{' '}
+          {errorMessage.message}
+        </div>
+      )}
       <div className='w-full h-[300px] rounded overflow-hidden'>
         <label
           htmlFor='dropzone-file'
@@ -106,10 +67,18 @@ const AdminProjectEditForm = ({ project }: { project: ProjectType }) => {
             />
           }
           <input
-            {...register('image')}
+            name='image'
             id='dropzone-file'
             type='file'
             className='hidden'
+            multiple={false}
+            onChange={(e) =>
+              setImageUrl(
+                e.target.files?.['0']
+                  ? URL.createObjectURL(e.target.files['0'])
+                  : ''
+              )
+            }
           />
         </label>
       </div>
@@ -125,7 +94,7 @@ const AdminProjectEditForm = ({ project }: { project: ProjectType }) => {
             id='title'
             type='text'
             required
-            {...register('title')}
+            name='title'
             className='block w-full rounded-md border-0 bg-gray-300 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
           />
         </div>
@@ -142,7 +111,7 @@ const AdminProjectEditForm = ({ project }: { project: ProjectType }) => {
             id='description'
             type='text'
             required
-            {...register('description')}
+            name='description'
             className='block w-full rounded-md border-0 bg-gray-300 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
           />
         </div>
@@ -158,7 +127,7 @@ const AdminProjectEditForm = ({ project }: { project: ProjectType }) => {
           <input
             id='demo'
             type='text'
-            {...register('demo')}
+            name='demo'
             className='block w-full rounded-md border-0 bg-gray-300 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
           />
         </div>
@@ -175,7 +144,7 @@ const AdminProjectEditForm = ({ project }: { project: ProjectType }) => {
             <input
               id='year'
               type='text'
-              {...register('year')}
+              name='year'
               className='block w-full rounded-md border-0 bg-gray-300 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
             />
           </div>
@@ -191,7 +160,7 @@ const AdminProjectEditForm = ({ project }: { project: ProjectType }) => {
             <input
               id='made_at'
               type='text'
-              {...register('made_at')}
+              name='made_at'
               className='block w-full rounded-md border-0 bg-gray-300 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
             />
           </div>
@@ -209,29 +178,11 @@ const AdminProjectEditForm = ({ project }: { project: ProjectType }) => {
             id='skills'
             name='skills'
             type='text'
-            value={skill}
-            onChange={(e) => setSkill(e.target.value)}
             className='block w-full rounded-md border-0 bg-gray-300 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
           />
-          <button type={'button'} onClick={addSkills}>
-            <Plus className='text-xl text-slate-900 absolute right-[10px] top-[7px] ' />
-          </button>
         </div>
-        <ul className='flex flex-wrap gap-x-2 my-4'>
-          {skills?.map((skill) => (
-            <li className='bg-gray-300 rounded-3xl px-2 py-1' key={skill}>
-              {skill}
-              <X
-                className='inline-flex cursor-pointer'
-                onClick={() => removeSkill(skill)}
-              />
-            </li>
-          ))}
-        </ul>
       </div>
-      <button className='flex w-full items-center justify-center rounded-lg bg-blue-700 px-5 py-2.5 text-white hover:bg-blue-800'>
-        {isSubmitting ? <Loader2 className='animate-spin' /> : 'Update'}
-      </button>
+      <SubmitButton name={'Update'} />
     </form>
   );
 };

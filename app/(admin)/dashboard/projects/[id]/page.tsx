@@ -1,4 +1,3 @@
-export const dynamic = 'force-dynamic';
 import { getProjectById } from '@/actions';
 import AdminProjectEditForm from '@/components/admin/admin-project-edit-form';
 const ProjectByID = async ({ params }: { params: { id: number } }) => {

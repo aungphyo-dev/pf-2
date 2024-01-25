@@ -1,4 +1,3 @@
-export const dynamic = 'force-dynamic';
 import { getAllProjects } from '@/actions';
 import AdminDashboardTable from '@/components/admin/admin-dashboard-table';
 import { Plus } from 'lucide-react';
@@ -10,9 +9,9 @@ const DashboardProjects = async () => {
       <div className='flex justify-end items-center'>
         <Link
           href={'/dashboard/projects/create'}
-          className='text-slate-200 flex justify-center items-center gap-x-1'
+          className='text-sm text-slate-200 bg-slate-400 flex justify-center items-center gap-x-1 p-2 rounded'
         >
-          Create <Plus />
+          Create <Plus size={18} />
         </Link>
       </div>
       <AdminDashboardTable projects={projects} />
