@@ -171,20 +171,3 @@ export const authSignOut = async () => {
   await supabase.auth.signOut();
   await signOut();
 };
-export const increaseViewsCount = async (slug: string) => {
-  noStore();
-  const { data: d } = await supabase
-    .from('view_blogs')
-    .select('*')
-    .eq('slug', slug);
-  const da = d?.at(0);
-  if (da) {
-    await supabase
-      .from('view_blogs')
-      .update({ views: da.views + 1 })
-      .eq('slug', slug);
-  } else {
-    await supabase.from('view_blogs').insert({ slug, views: 1 });
-  }
-  revalidatePath('/blogs');
-};
