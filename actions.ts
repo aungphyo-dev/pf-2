@@ -47,6 +47,7 @@ export const deleteProject = async (id: number, image: string) => {
 };
 export const updateProject = async (
   id: number,
+  image : string,
   prev: PrevState,
   formData: FormData
 ): Promise<PrevState> => {
@@ -66,17 +67,18 @@ export const updateProject = async (
     };
   }
   const data = validateFields.data;
-  const fileName = Date.now() + data.image['name'];
   noStore();
-  await supabaseAdmin.storage
-    .from('projects')
-    .upload(`images/${fileName}`, data.image, {
-      cacheControl: '3600',
-      upsert: true,
-    });
+  if (data.image["size"] > 0){
+    await supabaseAdmin.storage
+      .from('projects')
+      .upload(`images/${image}`, data.image, {
+        cacheControl: '3600',
+        upsert: true,
+      });
+  }
   await supabaseAdmin
     .from('projects')
-    .update([{ ...data, image: fileName }])
+    .update([{ ...data,image}])
     .eq('id', id);
   revalidatePath('/');
   revalidatePath('/projects');

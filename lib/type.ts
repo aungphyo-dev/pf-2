@@ -43,11 +43,11 @@ export const projectEditSchema = z.object({
   made_at: z.string().nullish(),
   image: z
     .any()
-    .refine((file) => (file ? file.size <= MAX_FILE_SIZE : true), {
+    .refine((file) => (file.size > 0 ? file.size <= MAX_FILE_SIZE : true), {
       message: 'Max file size is 5MB.',
     })
     .refine(
-      (file) => (file ? ACCEPTED_IMAGE_TYPES.includes(file.type) : true),
+      (file) => (file.size > 0 ? ACCEPTED_IMAGE_TYPES.includes(file.type) : true),
       {
         message: '.jpg, .jpeg, .png and .webp files are accepted.',
       }
