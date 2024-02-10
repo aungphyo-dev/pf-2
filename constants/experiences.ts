@@ -6,7 +6,7 @@ const experiences = [
     companyLink: 'https://mml.com.mm/',
     description:
       'I work at Myanmar Media Linkage  in November 1, 2023 as Frontend developer.',
-    durationStart: 'November 2023',
+    durationStart: 'Nov 2023',
     durationEnd: 'Present',
     skills: ['Typescript', 'ReactJS', 'Redux', 'NextJS', 'Next-Auth'],
   },
@@ -16,8 +16,8 @@ const experiences = [
     company: 'Freelance Remote',
     companyLink: 'https://upwork.com',
     description: 'I work at Freelance in July 1, 2023 as Frontend developer.',
-    durationStart: 'February',
-    durationEnd: 'October 2023',
+    durationStart: 'Feb',
+    durationEnd: 'Oct 2023',
     skills: ['Javascript', 'Typescript', 'ReactJS', 'Redux'],
   },
 ];

@@ -18,8 +18,8 @@ const About = () => {
           Myanmar Media Linage
         </a>
         , where I am honing my skills and contributing to innovative web
-        projects with tech stacks that include Javascript, ReactJS, ReactNative,
-        NextJS, PHP, Laravel, MySql, Postgresql,MongoDB, Firebase and Supabase.
+        projects with tech stacks that include Javascript, typescript, React.js,
+        Next.js, Node.js, Express.js, PHP, Laravel, MySql, Postgresql,MongoDB, Firebase and Supabase.
       </p>
       <p className='mb-5 text-[17px] leading-[30px] tracking-wide text-[#94a3b8]'>
         I am passionate about crafting seamless and captivating online

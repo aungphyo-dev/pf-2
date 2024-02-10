@@ -17,7 +17,7 @@ const HomeWrapper = () => {
           <div className='lg:sticky lg:top-0  lg:max-h-screen  lg:flex-col lg:justify-between lg:py-24'>
             <Hero />
           </div>
-          <div className='lg:px-8 '>
+          <div className='lg:px-4 '>
             <About />
             <Experience />
             <Suspense
