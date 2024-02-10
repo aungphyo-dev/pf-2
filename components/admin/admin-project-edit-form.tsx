@@ -12,7 +12,11 @@ const initialFormState = {
 };
 const AdminProjectEditForm = ({ project }: { project: ProjectType }) => {
   const [imageUrl, setImageUrl] = useState('');
-  const updateProjectWithId = updateProject.bind(null, project.id as number,project.image as string);
+  const updateProjectWithId = updateProject.bind(
+    null,
+    project.id as number,
+    project.image as string
+  );
   const [errorMessage, dispatch] = useFormState(
     updateProjectWithId,
     initialFormState
@@ -118,7 +122,7 @@ const AdminProjectEditForm = ({ project }: { project: ProjectType }) => {
             type='text'
             name='demo'
             className='block w-full rounded-md border-0 bg-gray-300 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
-            defaultValue={project.demo ?? ""}
+            defaultValue={project.demo ?? ''}
           />
         </div>
       </div>
@@ -153,7 +157,7 @@ const AdminProjectEditForm = ({ project }: { project: ProjectType }) => {
               type='text'
               name='made_at'
               className='block w-full rounded-md border-0 bg-gray-300 px-3 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6'
-              defaultValue={project.made_at ?? ""}
+              defaultValue={project.made_at ?? ''}
             />
           </div>
         </div>

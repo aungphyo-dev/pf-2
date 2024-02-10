@@ -47,7 +47,8 @@ export const projectEditSchema = z.object({
       message: 'Max file size is 5MB.',
     })
     .refine(
-      (file) => (file.size > 0 ? ACCEPTED_IMAGE_TYPES.includes(file.type) : true),
+      (file) =>
+        file.size > 0 ? ACCEPTED_IMAGE_TYPES.includes(file.type) : true,
       {
         message: '.jpg, .jpeg, .png and .webp files are accepted.',
       }

@@ -47,7 +47,7 @@ export const deleteProject = async (id: number, image: string) => {
 };
 export const updateProject = async (
   id: number,
-  image : string,
+  image: string,
   prev: PrevState,
   formData: FormData
 ): Promise<PrevState> => {
@@ -68,7 +68,7 @@ export const updateProject = async (
   }
   const data = validateFields.data;
   noStore();
-  if (data.image["size"] > 0){
+  if (data.image['size'] > 0) {
     await supabaseAdmin.storage
       .from('projects')
       .upload(`images/${image}`, data.image, {
@@ -78,7 +78,7 @@ export const updateProject = async (
   }
   await supabaseAdmin
     .from('projects')
-    .update([{ ...data,image}])
+    .update([{ ...data, image }])
     .eq('id', id);
   revalidatePath('/');
   revalidatePath('/projects');
