@@ -1,4 +1,4 @@
-import { Facebook, Github, Instagram, Twitter } from 'lucide-react';
+import { Facebook, Github, Instagram, Linkedin, Twitter } from 'lucide-react';
 const SocialLink = ({ link, icon }: { link: string; icon: string }) => {
   return (
     <a
@@ -24,5 +24,7 @@ export const ICON = ({ name }: { name: string }) => {
       return <Github />;
     case 'twitter':
       return <Twitter />;
+    case "linkedin" :
+      return <Linkedin/>
   }
 };

@@ -33,6 +33,10 @@ const Hero = () => {
               link='https://www.twitter.com/typle_x/'
               icon={'twitter'}
             />
+            <SocialLink
+              link='https://www.linkedin.com/in/aungpyaephyo1412/'
+              icon={'linkedin'}
+            />
           </div>
         </div>
       </div>
