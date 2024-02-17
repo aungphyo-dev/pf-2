@@ -6,6 +6,10 @@ export const metadata = {
 };
 const Projects = async () => {
   const projects = await getAllProjects();
-  return <ProjectsTable projects={projects} />;
+  return (
+    <>
+      <ProjectsTable projects={projects} />
+    </>
+  );
 };
 export default Projects;

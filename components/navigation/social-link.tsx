@@ -24,7 +24,7 @@ export const ICON = ({ name }: { name: string }) => {
       return <Github />;
     case 'twitter':
       return <Twitter />;
-    case "linkedin" :
-      return <Linkedin/>
+    case 'linkedin':
+      return <Linkedin />;
   }
 };
