@@ -8,6 +8,7 @@ export const ProjectSchema = z.object({
   skills: z.string().min(1),
   year: z.string().min(1),
   made_at: z.string().nullish(),
+  apk : z.string().nullish()
 });
 export type ProjectType = z.infer<typeof ProjectSchema>;
 export const ProjectsSchema = z.array(ProjectSchema);
