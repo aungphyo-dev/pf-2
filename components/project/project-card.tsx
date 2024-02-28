@@ -56,6 +56,21 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
           <p className='mt-2 text-sm leading-normal text-[#94a3b8]'>
             {project.description}
           </p>
+          {project.apk &&
+            <a
+              className="relative mt-2 inline-flex items-center text-sm font-medium text-slate-300 hover:text-teal-300 focus-visible:text-teal-300"
+              href={project.apk} target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Over 100,000 installs on Visual Studio Code Marketplace (opens in a new tab)">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="mr-1 h-4 w-4"
+                   aria-hidden="true">
+                <path
+                  d="M10.75 2.75a.75.75 0 00-1.5 0v8.614L6.295 8.235a.75.75 0 10-1.09 1.03l4.25 4.5a.75.75 0 001.09 0l4.25-4.5a.75.75 0 00-1.09-1.03l-2.955 3.129V2.75z"></path>
+                <path
+                  d="M3.5 12.75a.75.75 0 00-1.5 0v2.5A2.75 2.75 0 004.75 18h10.5A2.75 2.75 0 0018 15.25v-2.5a.75.75 0 00-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5z"></path>
+              </svg>
+              <span>Install apk</span></a>
+          }
           <ul className='mt-2 flex flex-wrap'>
             {project.skills.split(',').map((skill) => (
               <li key={skill.toString()} className='mr-1.5 mt-2'>
@@ -64,12 +79,11 @@ const ProjectCard = ({ project }: { project: ProjectType }) => {
                 </div>
               </li>
             ))}
+
           </ul>
-          {project.apk && <div className="mt-5 w-fit ">
-            <a href={project.apk} download className="flex items-center gap-x-3 justify-between lg:justify-start  rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">download apk <ArrowDown size="15"/></a>
-          </div>}
         </div>
-        <div className='relative min-h-[160px] overflow-hidden rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1 md:max-h-[75px] md:min-h-[74px]'>
+        <div
+          className='relative min-h-[160px] overflow-hidden rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:order-1 sm:col-span-2 sm:translate-y-1 md:max-h-[75px] md:min-h-[74px]'>
           <Image
             fill
             priority
