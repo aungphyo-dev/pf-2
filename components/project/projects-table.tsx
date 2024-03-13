@@ -40,7 +40,7 @@ const ProjectsTable = ({ projects }: { projects: ProjectsType }) => {
             </tr>
           </thead>
           <tbody>
-            {projects.map((p) => (
+            {projects.sort((a,b)=>+b.year - +a.year).map((p) => (
               <tr
                 key={p.id}
                 className='border-b border-slate-300/10 last:border-none'
