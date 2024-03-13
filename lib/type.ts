@@ -60,7 +60,7 @@ export const ExperienceSchema = z.object({
   id: z.number(),
   title: z.string().min(1),
   company: z.string().min(1),
-  companyLink: z.string().min(1),
+  companyLink: z.string().optional(),
   description: z.string().min(1),
   durationStart: z.string().min(1),
   durationEnd: z.string().min(1),
