@@ -9,14 +9,14 @@ const About = () => {
         <span className='font-semibold text-slate-200'>Aung Pyae Phyo</span>, I
         am 20 years old frontend developer based in Mandalay. I am currently
         part of the talented team at{' '}
-        <a
-          target='_blank'
-          rel='noreferrer'
-          href='https://mml.com.mm'
+        <span
+          // target='_blank'
+          // rel='noreferrer'
+          // href='https://mml.com.mm'
           className='font-semibold text-slate-200'
         >
-          Myanmar Media Linage
-        </a>
+          MGC
+        </span>
         , where I am honing my skills and contributing to innovative web
         projects with tech stacks that include Javascript, typescript, React.js,
         Next.js, Node.js, Express.js, PHP, Laravel, MySql, Postgresql,MongoDB,
