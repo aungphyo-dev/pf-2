@@ -6,9 +6,9 @@ const Project = async () => {
     <div data-section='projects' className='pt-12 lg:pt-24' id='projects'>
       <StickyNavigationBar name={'projects'} />
       <ul className='group/list'>
-        {projects?.sort((a,b)=>+b.year - +a.year).map((project) => (
-          <ProjectCard key={project.id} project={project} />
-        ))}
+        {projects
+          ?.sort((a, b) => +b.year - +a.year)
+          .map((project) => <ProjectCard key={project.id} project={project} />)}
       </ul>
       <div>
         <NavigateLink
