@@ -43,6 +43,7 @@ export const deleteProject = async (id: number, image: string) => {
   await supabaseAdmin.from('projects').delete().eq('id', id);
   revalidatePath('/');
   revalidatePath('/projects');
+  revalidatePath('/dashboard');
   revalidatePath('/dashboard/projects');
 };
 export const updateProject = async (

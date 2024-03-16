@@ -3,10 +3,21 @@ const experiences = [
     id: 1,
     title: 'Full-Stack Developer',
     company: 'Freelance',
-    description: 'I work at Freelance in March 1, 2023 as MERN stack developer.',
+    description:
+      'I work at Freelance in March 1, 2023 as MERN stack developer.',
     durationStart: 'Mar 2024',
     durationEnd: 'Present',
-    skills: ['Javascript', 'Typescript', 'React.js', 'Redux','Next.js','Node.js','Express.js','MongoDB','Postgresql'],
+    skills: [
+      'Javascript',
+      'Typescript',
+      'React.js',
+      'Redux',
+      'Next.js',
+      'Node.js',
+      'Express.js',
+      'MongoDB',
+      'Postgresql',
+    ],
   },
   {
     id: 2,
