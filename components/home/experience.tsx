@@ -1,8 +1,4 @@
-import {
-  ExperienceCard,
-  NavigateLink,
-  StickyNavigationBar,
-} from '@/components';
+import { ExperienceCard, StickyNavigationBar } from '@/components';
 import experiences from '@/constants/experiences';
 
 const Experience = () => {
@@ -14,15 +10,6 @@ const Experience = () => {
           <ExperienceCard key={experience.id} experience={experience} />
         ))}
       </ol>
-      <div>
-        <NavigateLink
-          content={'view all my abilities'}
-          download={true}
-          link={
-            'https://afyxxqlmftohiygrtfjm.supabase.co/storage/v1/object/public/projects/aung%20pyae%20phyo.pdf'
-          }
-        />
-      </div>
     </div>
   );
 };

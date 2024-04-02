@@ -6,20 +6,23 @@ import Link from 'next/link';
 const ProjectsTable = ({ projects }: { projects: ProjectsType }) => {
   return (
     <div className='relative mx-auto min-h-screen w-full max-w-screen-xl pt-[20px]'>
-      <div className='px-3 py-9 md:px-5'>
+      <div className='px-3 py-4 lg:py-9 md:px-5'>
         <Link
           href={'/'}
           className='group mb-2 inline-flex items-center font-semibold leading-tight text-teal-300'
         >
           <ArrowLeft className='mr-1 h-4 w-4 transition-transform group-hover:-translate-x-2' />
-          Typle
+          Home
         </Link>
         <h1 className='text-4xl font-bold tracking-tight text-slate-200 sm:text-5xl'>
           All Projects
         </h1>
       </div>
       <div className='w-full px-3 md:px-5'>
-        <table id='content' className='mt-12 w-full border-collapse text-left'>
+        <table
+          id='content'
+          className='mt-4 lg:mt-12 w-full border-collapse text-left'
+        >
           <thead className='sticky top-0 z-10 border-b border-slate-300/10 bg-slate-900/75 px-6 md:px-0 py-5 backdrop-blur'>
             <tr>
               <th className='py-4 pr-8 text-sm font-semibold text-slate-200  max-w-fit lg:w-auto'>
