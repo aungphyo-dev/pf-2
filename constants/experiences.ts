@@ -5,7 +5,7 @@ const experiences = [
     company: 'Freelance',
     description:
       'I work at Freelance in March 1, 2023 as MERN stack developer.',
-    durationStart: 'Mar 2024',
+    durationStart: 'Feb 2023',
     durationEnd: 'Present',
     skills: [
       'Javascript',
@@ -29,15 +29,6 @@ const experiences = [
     durationStart: 'Nov 2023',
     durationEnd: 'Mar',
     skills: ['Typescript', 'React.js', 'Redux', 'Next.js', 'Next-Auth'],
-  },
-  {
-    id: 3,
-    title: 'Frontend Developer',
-    company: 'Freelance Remote',
-    description: 'I work at Freelance in July 1, 2023 as Frontend developer.',
-    durationStart: 'Feb',
-    durationEnd: 'Oct 2023',
-    skills: ['Javascript', 'Typescript', 'React.js', 'Redux'],
   },
 ];
 export default experiences;
